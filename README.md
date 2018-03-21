@@ -1,1 +1,1 @@
-# INQUVO Theme
+# InQuvo Theme
