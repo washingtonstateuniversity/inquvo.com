@@ -78,18 +78,14 @@ section {
 }
 
 .vertical-header {
-	color: #fff;
 	left: 64px;
 	position: absolute;
 	top: 330px; /* Rubbish */
-	transform: rotate(180deg);
-	writing-mode: vertical-rl;
 	z-index: 1;
 }
 
-.vertical-header * {
-	display: inline-block;
-	vertical-align: bottom;
+.vertical-header svg {
+	transform: rotate(-90deg);
 }
 
 .vertical-header h1 {
