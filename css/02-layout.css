@@ -103,7 +103,7 @@ section {
 section {
 	margin: 0 auto;
 	max-width: 1280px;
-	padding: 138px 0;
+	padding: 120px 0;
 }
 
 .side-right,
@@ -177,7 +177,7 @@ section {
 
 .hero > div:first-of-type:before {
 	background-image:
-		url(images/hero-background.png),
+		url(images/bg-hero.png),
 		linear-gradient(to right, rgba(63, 139, 147, 1) 0%, transparent 100%);
 	background-position: bottom left, top left;
 	background-repeat: no-repeat;
@@ -240,29 +240,52 @@ section {
 	width: 1px;
 }
 
-.circles {
+.dots-above,
+.dots-below {
 	position: relative;
 }
 
-.circles:before {
-	background: url(images/dots.svg);
+.dots-above:before,
+.dots-below:after {
+	background: url(images/icon-dots.svg);
 	content: "";
 	height: 28px;
 	left: 0;
 	margin: 0 auto;
 	position: absolute;
 	right: 0;
-	top: -14px;
 	width: 28px;
+	z-index: 1;
 }
 
-.background-grid {
-	background-image:
-		linear-gradient(to bottom, transparent 0%, #fff 70%),
-		radial-gradient(#3f8b93 10%, #fff 10%);
-	background-size:
-		100%,
-		12px 12px;
+.dots-above:before {
+	top: -14px;
+}
+
+.dots-below:after {
+	bottom: -14px;
+}
+
+.background-texture,
+.background-texture > * {
+	position: relative;
+}
+
+.background-texture:before {
+	content: "";
+	height: 100%;
+	left: calc(50% - 50vw);
+	position: absolute;
+	top: 0;
+	width: 100vw;
+}
+
+.background-texture.blue-light-fade:before {
+	background: url(images/bg-blue-light-fade.png) repeat-x;
+}
+
+.background-texture.blue-dark-fade:before {
+	background: url(images/bg-blue-dark-fade.png) repeat-x;
 }
 
 #site-footer {
@@ -350,4 +373,8 @@ section {
 	display: block;
 	height: 12px;
 	width: 12px;
+}
+
+#svg-symbols {
+	display: none;
 }
