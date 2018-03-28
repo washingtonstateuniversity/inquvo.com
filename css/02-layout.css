@@ -176,7 +176,11 @@ section {
 }
 
 .hero > div:first-of-type:before {
-	background: linear-gradient(to right, rgba(63, 139, 147, 1) 0%, transparent 100%);
+	background-image:
+		url(images/hero-background.png),
+		linear-gradient(to right, rgba(63, 139, 147, 1) 0%, transparent 100%);
+	background-position: bottom left, top left;
+	background-repeat: no-repeat;
 	mix-blend-mode: multiply;
 	top: -149px;
 }
