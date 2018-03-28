@@ -150,7 +150,7 @@ section {
 	flex: 1 0 auto;
 	flex-direction: column;
 	justify-content: flex-end;
-	padding: 136px 0 385px;
+	padding: 136px 0 370px;
 }
 
 .hero > div:first-of-type > * {
@@ -236,7 +236,7 @@ section {
 	margin: 0 auto;
 	position: absolute;
 	right: 0;
-	top: -280px;
+	top: -265px;
 	width: 1px;
 }
 
