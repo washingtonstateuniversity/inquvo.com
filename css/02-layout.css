@@ -241,8 +241,7 @@ section {
 }
 
 .circles:before {
-	background: #a60f2d;
-	border-radius: 50%;
+	background: url(images/dots.svg);
 	content: "";
 	height: 28px;
 	left: 0;
