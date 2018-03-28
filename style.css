@@ -524,13 +524,6 @@ section {
 	padding: 0 10px 0 30px;
 }
 
-.channels a {
-	background: #fff;
-	display: block;
-	height: 12px;
-	width: 12px;
-}
-
 #svg-symbols {
 	display: none;
 }
