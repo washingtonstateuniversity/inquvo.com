@@ -159,17 +159,15 @@ section {
 	display: flex;
 }
 
-.logo img {
-	max-height: 20px;
-	max-width: 90px;
-	overflow: hidden;
-}
-
 #site-header .logo {
 	-ms-flex-align: center;
 	    align-items: center;
 	display: -ms-flexbox;
 	display: flex;
+}
+
+#site-header .logo svg:first-of-type {
+	margin-right: 16px;
 }
 
 #site-navigation {
