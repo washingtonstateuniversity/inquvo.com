@@ -85,7 +85,7 @@ section {
 }
 
 .vertical-header svg {
-	transform: rotate(-90deg);
+	transform: rotate(-90deg) translateY(-173px);
 }
 
 .vertical-header h1 {

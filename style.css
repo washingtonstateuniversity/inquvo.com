@@ -215,21 +215,15 @@ section {
 }
 
 .vertical-header {
-	color: #fff;
 	left: 64px;
 	position: absolute;
 	top: 330px; /* Rubbish */
-	-ms-transform: rotate(180deg);
-	    transform: rotate(180deg);
-	-webkit-writing-mode: vertical-rl;
-	    -ms-writing-mode: tb-rl;
-	        writing-mode: vertical-rl;
 	z-index: 1;
 }
 
-.vertical-header * {
-	display: inline-block;
-	vertical-align: bottom;
+.vertical-header svg {
+	-ms-transform: rotate(-90deg) translateY(-173px);
+	    transform: rotate(-90deg) translateY(-173px);
 }
 
 .vertical-header h1 {
