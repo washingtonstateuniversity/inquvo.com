@@ -125,13 +125,13 @@ section {
 	background-position: center;
 	background-size: cover;
 	content: "";
-	margin: 0 -64px;
+	left: calc(50% - 50vw);
 	max-width: none;
 	min-height: calc(100vh - 76px);
 	overflow: hidden;
 	padding: 0 64px;
 	position: relative;
-	width: calc(100% + 128px);
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -198,27 +198,29 @@ section {
 	background: linear-gradient(to bottom, transparent 0%, rgba(242, 242, 242, 1) 50%);
 }
 
-@supports (-webkit-clip-path: polygon(0% 100%, 100% calc(100% - 285px), 100% 100%, 0% 100%)) or (clip-path: polygon(0% 100%, 100% calc(100% - 285px), 100% 100%, 0% 100%)) {
+@supports (-webkit-clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%)) or (clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%)) {
 
 	.hero > div:first-of-type:before,
 	.hero > div:first-of-type:after {
-		left: calc(50% - (1922px / 2));
+		left: calc(50% - 50vw);
 		top: 0;
 		transform: none;
-		width: 1922px;
+		width: 100vw;
 	}
 
 	.hero > div:first-of-type:before {
-		clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 285px), 0% 100%);
+		clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 15vw), 0% 100%);
 	}
 
 	.hero > div:first-of-type:after {
-		background: linear-gradient(to bottom, transparent calc(100% - 285px), rgba(242, 242, 242, .85) 100%);
-		clip-path: polygon(0% 100%, 100% calc(100% - 285px), 100% 100%, 0% 100%);
+		background: linear-gradient(to bottom, transparent calc(100% - 15vw), rgba(242, 242, 242, .85) 100%);
+		clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%);
 	}
 
 	.hero > div:last-of-type:before {
 		background: linear-gradient(to bottom, rgba(242, 242, 242, .85) 0%, rgba(242, 242, 242, 1) 50%);
+		left: calc(50% - 50vw);
+		width: 100vw;
 	}
 }
 
