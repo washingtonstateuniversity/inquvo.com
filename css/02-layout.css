@@ -77,6 +77,39 @@ section {
 	width: 100%;
 }
 
+.article-header {
+	background: rgb(84, 202, 210);
+	left: calc(50% - 50vw);
+	padding: 48px 64px;
+	position: relative;
+	width: 100vw;
+}
+
+.article-header[style] {
+	background-position: center;
+	background-size: cover;
+	padding-top: 385px;
+}
+
+.article-header[style]:before {
+	background: linear-gradient(155deg, rgba(63, 139, 147, .8) 0%, rgba(63, 139, 147, .4) 10%, rgba(0, 0, 0, 0) 35%), linear-gradient(-45deg, rgba(63, 139, 147, .8) 0%, rgba(63, 139, 147, .4) 10%, rgba(0, 0, 0, 0) 35%);
+	content: "";
+	height: 100%;
+	left: 0;
+	mix-blend-mode: multiply;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.article-header h1 {
+	color: #fff;
+	margin: 0 auto;
+	max-width: 1280px;
+	text-transform: uppercase;
+	position: relative;
+}
+
 .vertical-header {
 	left: 64px;
 	position: absolute;
