@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/includes/customizer.php';
 require_once __DIR__ . '/includes/disable-emojis.php';
+require_once __DIR__ . '/includes/svg-functions.php';
 
 add_action( 'after_setup_theme', 'inquvo_setup', 11 );
 add_action( 'wp_enqueue_scripts', 'inquvo_styles', 11 );
