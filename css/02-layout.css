@@ -77,6 +77,21 @@ section {
 	width: 100%;
 }
 
+.article-header {
+	background: rgb(84, 202, 210);
+	left: calc(50% - 50vw);
+	padding: 48px 64px;
+	position: relative;
+	width: 100vw;
+}
+
+.article-header h1 {
+	color: #fff;
+	margin: 0 auto;
+	max-width: 1280px;
+	text-transform: uppercase;
+}
+
 .vertical-header {
 	left: 64px;
 	position: absolute;
