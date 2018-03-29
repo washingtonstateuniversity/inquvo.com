@@ -24,8 +24,11 @@
 
 		<div>
 
-			<a href="#" class="logo">
-				<img height="20" width="90" alt="InQuvo logo">
+			<a href="<?php echo esc_url( home_url() ); ?>" class="logo" aria-label="InQuvo">
+				<svg xmlns="http://www.w3.org/2000/svg" width="90" height="20" viewBox="0 0 229 50">
+					<use xlink:href="#logo-inuvo" fill="#fff" />
+					<use xlink:href="#logo-q" fill="#54cad2" />
+				</svg>
 			</a>
 
 			<p>&copy; <?php echo esc_html( date( 'Y' ) ); ?> InQuvo. All Rights Reserved.</p>

@@ -12,7 +12,15 @@
 
 	<header id="site-header">
 
-		<!-- logo -->
+		<a href="<?php echo esc_url( home_url() ); ?>" class="logo" aria-label="InQuvo home">
+			<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+				<use xlink:href="#icon-dots" />
+			</svg>
+			<svg xmlns="http://www.w3.org/2000/svg" width="90" height="20" viewBox="0 0 229 50">
+				<use xlink:href="#logo-inuvo" fill="#404040" />
+				<use xlink:href="#logo-q" fill="#404040" />
+			</svg>
+		</a>
 
 		<?php if ( has_nav_menu( 'top' ) ) { ?>
 
