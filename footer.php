@@ -1,16 +1,18 @@
-	</div><!-- #content -->
+	</main><!-- #content -->
 
 	<footer id="site-footer">
 
 		<div>
 
-			<nav>
+			<nav class="footer-menu">
 
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'footer',
 					'menu_class' => '',
-					'depth' => 1,
+					'container' => '',
+					'fallback_cb' => false,
+					'depth' => 2,
 				) );
 				?>
 
@@ -36,6 +38,8 @@
 				wp_nav_menu( array(
 					'theme_location' => 'social',
 					'menu_class' => '',
+					'container' => '',
+					'fallback_cb' => false,
 					'depth' => 1,
 					'link_before' => '<span class="screen-reader-text">',
 					'link_after' => '</span>',
