@@ -1,134 +1,3 @@
-/*
- Theme Name:  InQuvo
- Theme URI:   https://inquvo.com
- Description: The child theme for the ESFCOM Tech Incubator.
- Author:      WSU University Communications, philcable
- Author URI:  https://web.wsu.edu
- Template:    twentyseventeen
- Version:     0.0.1
-*/
-
-body {
-	color: #4c4c4c;
-	font-family: Montserrat, sans-serif;
-}
-
-a {
-	text-decoration: none;
-}
-
-.screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	width: 1px;
-}
-
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
-	clip: auto;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-size: .875rem;
-	font-weight: 700;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000;
-}
-
-.hero > div:first-of-type {
-	color: #fff;
-}
-
-h2 {
-	font-size: 16px;
-	font-weight: 500;
-	letter-spacing: .4em;
-	margin: 0;
-	padding: 18px 0 65px;
-	position: relative;
-	text-transform: uppercase;
-}
-
-h2:after {
-	background-color: rgb(63, 139, 147);
-	bottom: 25px;
-	content: "";
-	height: 10px;
-	left: 0;
-	position: absolute;
-	width: 70px;
-}
-
-.hero h2:after {
-	margin: 0 auto;
-	right: 0;
-}
-
-.hero > div:first-of-type h2:after {
-	background-color: #fff;
-}
-
-p {
-	font-size: 22px;
-	font-weight: 400;
-	line-height: 1.65;
-	margin: 0;
-	padding: 0 0 1em;
-}
-
-.hero p {
-	text-align: center;
-}
-
-.hero > div:first-of-type p {
-	font-size: 16px;
-	line-height: 2.3;
-}
-
-.button a {
-	background: #3f8b93;
-	border-radius: 2.5px;
-	box-sizing: border-box;
-	color: #fff;
-	display: inline-block;
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 1.2;
-	margin-top: 6px;
-	min-height: 50px;
-	min-width: 190px;
-	padding: 17px;
-	text-align: center;
-	text-transform: uppercase;
-}
-
-.button.white a {
-	background: #fff;
-	color: rgb(76, 76, 76);
-}
-
-.button.accent a {
-	background: rgb(84, 202, 210);
-	color: #fff;
-}
-
-main .hack-a-thon {
-	position: absolute;
-	right: 64px;
-	top: 38px;
-	z-index: 1;
-}
-
 html * {
 	box-sizing: border-box;
 }
@@ -155,14 +24,11 @@ section {
 }
 
 #site-header {
-	display: -ms-flexbox;
 	display: flex;
 }
 
 #site-header .logo {
-	-ms-flex-align: center;
-	    align-items: center;
-	display: -ms-flexbox;
+	align-items: center;
 	display: flex;
 }
 
@@ -179,7 +45,6 @@ section {
 }
 
 #top-menu {
-	display: -ms-flexbox;
 	display: flex;
 	list-style: none;
 	margin: 0;
@@ -195,10 +60,8 @@ section {
 }
 
 #top-menu a {
-	-ms-flex-align: center;
-	    align-items: center;
+	align-items: center;
 	color: rgb(76, 76, 76);
-	display: -ms-flexbox;
 	display: flex;
 	font-size: .75em;
 	font-weight: 700;
@@ -222,8 +85,7 @@ section {
 }
 
 .vertical-header svg {
-	-ms-transform: rotate(-90deg) translateY(-173px);
-	    transform: rotate(-90deg) translateY(-173px);
+	transform: rotate(-90deg) translateY(-173px);
 }
 
 .vertical-header h1 {
@@ -246,14 +108,12 @@ section {
 
 .side-right,
 .thirds {
-	display: -ms-flexbox;
 	display: flex;
 }
 
 .side-right > div,
 .thirds > div {
-	-ms-flex: 1 1 auto;
-	    flex: 1 1 auto;
+	flex: 1 1 auto;
 }
 
 .side-right > div:first-of-type {
@@ -261,8 +121,7 @@ section {
 }
 
 .hero {
-	-ms-flex-align: center;
-	    align-items: center;
+	align-items: center;
 	background-position: center;
 	background-size: cover;
 	content: "";
@@ -273,12 +132,9 @@ section {
 	padding: 0 64px;
 	position: relative;
 	width: 100vw;
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-direction: column;
-	    flex-direction: column;
-	-ms-flex-pack: end;
-	    justify-content: flex-end;
+	flex-direction: column;
+	justify-content: flex-end;
 }
 
 .hero > div {
@@ -289,16 +145,11 @@ section {
 }
 
 .hero > div:first-of-type {
-	-ms-flex-align: center;
-	    align-items: center;
-	display: -ms-flexbox;
+	align-items: center;
 	display: flex;
-	-ms-flex: 1 0 auto;
-	    flex: 1 0 auto;
-	-ms-flex-direction: column;
-	    flex-direction: column;
-	-ms-flex-pack: end;
-	    justify-content: flex-end;
+	flex: 1 0 auto;
+	flex-direction: column;
+	justify-content: flex-end;
 	padding: 136px 0 370px;
 }
 
@@ -343,8 +194,7 @@ section {
 .hero > div:first-of-type:before,
 .hero > div:first-of-type:after {
 	left: calc(50% - (2070px / 2));
-	-ms-transform: rotate(-8.5deg);
-	    transform: rotate(-8.5deg);
+	transform: rotate(-8.5deg);
 	width: 2070px;
 }
 
@@ -352,26 +202,23 @@ section {
 	background: linear-gradient(to bottom, transparent 0%, rgba(242, 242, 242, 1) 50%);
 }
 
-@supports ((-webkit-clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%)) or (clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%))) {
+@supports (-webkit-clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%)) or (clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%)) {
 
 	.hero > div:first-of-type:before,
 	.hero > div:first-of-type:after {
 		left: calc(50% - 50vw);
 		top: 0;
-		-ms-transform: none;
-		    transform: none;
+		transform: none;
 		width: 100vw;
 	}
 
 	.hero > div:first-of-type:before {
-		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 15vw), 0% 100%);
-		        clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 15vw), 0% 100%);
+		clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 15vw), 0% 100%);
 	}
 
 	.hero > div:first-of-type:after {
 		background: linear-gradient(to bottom, transparent calc(100% - 15vw), rgba(242, 242, 242, .85) 100%);
-		-webkit-clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%);
-		        clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%);
+		clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%);
 	}
 
 	.hero > div:last-of-type:before {
@@ -453,7 +300,6 @@ section {
 }
 
 #site-footer div {
-	display: -ms-flexbox;
 	display: flex;
 	margin: 100px auto;
 	max-width: 1280px;
@@ -475,7 +321,6 @@ section {
 }
 
 .footer-menu > ul {
-	display: -ms-flexbox;
 	display: flex;
 	font-size: 12px;
 	margin: 0;
@@ -509,7 +354,6 @@ section {
 }
 
 .channels ul {
-	display: -ms-flexbox;
 	display: flex;
 	list-style: none;
 	margin: 0;
@@ -527,4 +371,3 @@ section {
 #svg-symbols {
 	display: none;
 }
-/*# sourceMappingURL=style.css.map */
