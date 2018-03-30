@@ -555,11 +555,28 @@ section {
 }
 
 .channels li + li {
-	padding-left: 20px;
+	padding-left: 18px;
 }
 
 .channels .back-to-top {
 	padding: 0 10px 0 30px;
+}
+
+.channels .icon {
+	fill: #fff;
+	height: 14px;
+	margin-top: 4px;
+	width: 14px;
+}
+
+.channels .icon-facebook {
+	height: 13px;
+	margin-top: 5px;
+}
+
+.channels .icon-twitter {
+	height: 16px;
+	margin-top: 3px;
 }
 
 #svg-symbols {
