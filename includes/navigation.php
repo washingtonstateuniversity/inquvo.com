@@ -4,6 +4,16 @@ namespace Inquvo\Navigation;
 
 add_filter( 'wp_nav_menu_items', 'Inquvo\Navigation\back_to_top', 10, 2 );
 
+/**
+ * Appends a "back to top" link to the social menu.
+ *
+ * @since 0.0.1
+ *
+ * @param string $items
+ * @param array  $args
+ *
+ * @return string
+ */
 function back_to_top( $items, $args ) {
 	if ( 'social' !== $args->theme_location ) {
 		return $items;
