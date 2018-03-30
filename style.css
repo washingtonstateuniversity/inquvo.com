@@ -236,7 +236,32 @@ section {
 	font-size: .75em;
 	font-weight: 700;
 	height: 60px;
+	position: relative;
 	text-transform: uppercase;
+	transition: color .4s ease;
+}
+
+#top-menu a:hover {
+	color: #3d8a93;
+}
+
+#top-menu a:before {
+	background: #3d8a93;
+	content: "";
+	height: 5px;
+	left: 0;
+	margin: 0 auto;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: opacity .4s ease-in-out, width .4s ease-in-out;
+	width: 0;
+}
+
+#top-menu a:hover:before {
+	opacity: 1;
+	width: 100%;
 }
 
 #content {
