@@ -8,8 +8,17 @@
  Version:     0.0.1
 */
 
+:root {
+
+	/* teals */
+
+	/* grays */
+
+	/* crimsons */
+}
+
 body {
-	color: #4c4c4c;
+	color: #404040;
 	font-family: Montserrat, sans-serif;
 }
 
@@ -64,7 +73,7 @@ p + h2 {
 }
 
 h2:after {
-	background-color: rgb(63, 139, 147);
+	background-color: #3d8a93;
 	bottom: 25px;
 	content: "";
 	height: 10px;
@@ -102,8 +111,8 @@ p,
 }
 
 .button a {
-	background: #3f8b93;
-	border-radius: 2.5px;
+	background: #3d8a93;
+	border-radius: 2px;
 	box-sizing: border-box;
 	color: #fff;
 	display: inline-block;
@@ -116,16 +125,34 @@ p,
 	padding: 17px;
 	text-align: center;
 	text-transform: uppercase;
+	transition: background .4s ease, color .4s ease, border-color .4s ease;
+}
+
+.button.crimson {
+	background: #ca1237;
+	color: #fff;
 }
 
 .button.white a {
 	background: #fff;
-	color: rgb(76, 76, 76);
+	color: #404040;
 }
 
-.button.accent a {
-	background: rgb(84, 202, 210);
+.button.transparent a {
+	background: transparent;
+	border: 1px solid #3d8a93;
+	color: #3d8a93;
+}
+
+.button a:hover,
+.button.white a:hover,
+.button.transparent a:hover {
+	background: #4fcad3;
 	color: #fff;
+}
+
+.button.transparent a:hover {
+	border-color: #4fcad3;
 }
 
 main .hack-a-thon {
@@ -365,7 +392,7 @@ section {
 .hero > div:first-of-type:before {
 	background-image:
 		url(images/bg-hero.png),
-		linear-gradient(to right, rgba(63, 139, 147, 1) 0%, transparent 100%);
+		linear-gradient(to right, #4fcad3 0%, transparent 100%);
 	background-position: bottom left, top left;
 	background-repeat: no-repeat;
 	mix-blend-mode: multiply;
@@ -420,7 +447,7 @@ section {
 }
 
 .hero > div:last-of-type:after {
-	background: #3f8b93;
+	background: #3d8a93;
 	content: "";
 	height: 230px;
 	left: 0;
@@ -498,7 +525,7 @@ section {
 }
 
 #site-footer {
-	background: #313131;
+	background: #333;
 	color: #fff;
 	overflow: hidden;
 	padding: 0 64px;
@@ -516,7 +543,7 @@ section {
 }
 
 #site-footer div + div {
-	border-top: 1px solid #4c4c4c;
+	border-top: 1px solid #404040;
 	padding: 10px 28px;
 }
 
