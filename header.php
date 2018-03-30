@@ -44,3 +44,5 @@
 	</header>
 
 	<main id="content">
+
+		<?php INQUVO\Navigation\get_feature_link(); ?>

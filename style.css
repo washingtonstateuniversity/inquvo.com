@@ -128,11 +128,6 @@ p,
 	transition: background .4s ease, color .4s ease, border-color .4s ease;
 }
 
-.button.crimson {
-	background: #ca1237;
-	color: #fff;
-}
-
 .button.white a {
 	background: #fff;
 	color: #404040;
@@ -155,11 +150,13 @@ p,
 	border-color: #4fcad3;
 }
 
-main .hack-a-thon {
-	position: absolute;
-	right: 64px;
-	top: 38px;
-	z-index: 1;
+.button.crimson a {
+	background: #ca1237;
+	color: #fff;
+}
+
+.button.crimson a:hover {
+	background: #820c23;
 }
 
 html * {
@@ -278,6 +275,15 @@ section {
 	padding: 0 64px;
 	position: relative;
 	width: 100%;
+}
+
+.feature-link {
+	list-style: none;
+	margin-right: 64px;
+	position: absolute;
+	right: calc(50% - 50vw);
+	top: 38px;
+	z-index: 1;
 }
 
 .article-header {
@@ -615,9 +621,13 @@ section {
 	padding-top: 9px;
 }
 
-#site-footer .hack-a-thon,
+#site-footer .feature-link,
 .channels {
 	margin: 0 0 0 auto;
+}
+
+#site-footer .feature-link {
+	position: static;
 }
 
 #site-footer .logo {

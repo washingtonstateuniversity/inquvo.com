@@ -134,11 +134,6 @@ p,
 	transition: background .4s ease, color .4s ease, border-color .4s ease;
 }
 
-.button.crimson {
-	background: var(--color-crimson-accent);
-	color: #fff;
-}
-
 .button.white a {
 	background: #fff;
 	color: var(--color-gray-75);
@@ -161,9 +156,11 @@ p,
 	border-color: var(--color-teal-accent);
 }
 
-main .hack-a-thon {
-	position: absolute;
-	right: 64px;
-	top: 38px;
-	z-index: 1;
+.button.crimson a {
+	background: var(--color-crimson-accent);
+	color: #fff;
+}
+
+.button.crimson a:hover {
+	background: var(--color-crimson-dark);
 }

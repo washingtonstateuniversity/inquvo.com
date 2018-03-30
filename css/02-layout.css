@@ -110,6 +110,15 @@ section {
 	width: 100%;
 }
 
+.feature-link {
+	list-style: none;
+	margin-right: 64px;
+	position: absolute;
+	right: calc(50% - 50vw);
+	top: 38px;
+	z-index: 1;
+}
+
 .article-header {
 	background: rgb(84, 202, 210);
 	box-sizing: content-box;
@@ -427,9 +436,13 @@ section {
 	padding-top: 9px;
 }
 
-#site-footer .hack-a-thon,
+#site-footer .feature-link,
 .channels {
 	margin: 0 0 0 auto;
+}
+
+#site-footer .feature-link {
+	position: static;
 }
 
 #site-footer .logo {
