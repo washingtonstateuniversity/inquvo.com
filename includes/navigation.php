@@ -2,7 +2,17 @@
 
 namespace Inquvo\Navigation;
 
+add_action( 'init', 'Inquvo\Navigation\register_footer_menu' );
 add_filter( 'wp_nav_menu_items', 'Inquvo\Navigation\back_to_top', 10, 2 );
+
+/**
+ * Registers a navigation menu for the footer.
+ *
+ * @since 0.0.1
+ */
+function register_footer_menu() {
+	register_nav_menu( 'footer', 'Footer' );
+}
 
 /**
  * Appends a "back to top" link to the social menu.
