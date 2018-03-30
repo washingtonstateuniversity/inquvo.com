@@ -479,6 +479,24 @@ section {
 	background: url(images/bg-blue-dark-fade.png) repeat-x;
 }
 
+.divider {
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+	left: calc(50% - 50vw);
+	position: relative;
+	width: 100vw;
+}
+
+.divider:before {
+	background: linear-gradient(to right, #ca1237 0%, transparent 100%);
+	content: "";
+	height: 100%;
+	mix-blend-mode: multiply;
+	position: absolute;
+	width: 100%;
+}
+
 #site-footer {
 	background: #313131;
 	color: #fff;
