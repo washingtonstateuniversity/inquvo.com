@@ -71,7 +71,7 @@ section {
 
 #content {
 	margin: 0 auto;
-	max-width: 1920px;
+	max-width: 1280px;
 	padding: 0 64px;
 	position: relative;
 	width: 100%;
@@ -79,6 +79,7 @@ section {
 
 .article-header {
 	background: rgb(84, 202, 210);
+	box-sizing: content-box;
 	left: calc(50% - 50vw);
 	padding: 48px 64px;
 	position: relative;
@@ -133,9 +134,7 @@ section {
 	text-transform: lowercase;
 }
 
-section {
-	margin: 0 auto;
-	max-width: 1280px;
+.wp-block-columns {
 	padding: 120px 0;
 }
 
