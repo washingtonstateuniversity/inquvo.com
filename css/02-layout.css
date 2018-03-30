@@ -36,6 +36,14 @@ section {
 	margin-right: 16px;
 }
 
+#site-header .logo-q {
+	transition: fill .4s ease;
+}
+
+#site-header .logo:hover .logo-q {
+	fill: var(--color-teal);
+}
+
 #site-navigation {
 	margin: 0 0 0 auto;
 }
