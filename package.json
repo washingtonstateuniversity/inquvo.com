@@ -1,6 +1,6 @@
 {
   "name": "inquvo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/washingtonstateuniversity/inquvo.com"
@@ -17,6 +17,7 @@
     "grunt-phpcs": "^0.4.0",
     "grunt-postcss": "^0.9.0",
     "grunt-stylelint": "^0.9.0",
+    "postcss-custom-properties": "6.2.0",
     "stylelint": "^9.1.1"
   }
 }

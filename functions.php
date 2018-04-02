@@ -16,7 +16,7 @@ add_action( 'wp_enqueue_scripts', 'inquvo_styles', 11 );
  * @return string
  */
 function inquvo_theme_version() {
-	return '0.0.1';
+	return '0.0.2';
 }
 
 /**

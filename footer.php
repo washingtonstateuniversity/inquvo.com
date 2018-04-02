@@ -18,7 +18,7 @@
 
 			</nav>
 
-			<p class="button accent hack-a-thon"><a href="#">Hack-a-thon﻿</a></p>
+			<?php INQUVO\Navigation\get_feature_link(); ?>
 
 		</div>
 

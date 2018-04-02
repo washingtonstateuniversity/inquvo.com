@@ -5,11 +5,20 @@
  Author:      WSU University Communications, philcable
  Author URI:  https://web.wsu.edu
  Template:    twentyseventeen
- Version:     0.0.1
+ Version:     0.0.2
 */
 
+:root {
+
+	/* teals */
+
+	/* grays */
+
+	/* crimsons */
+}
+
 body {
-	color: #4c4c4c;
+	color: #404040;
 	font-family: Montserrat, sans-serif;
 }
 
@@ -64,7 +73,7 @@ p + h2 {
 }
 
 h2:after {
-	background-color: rgb(63, 139, 147);
+	background-color: #3d8a93;
 	bottom: 25px;
 	content: "";
 	height: 10px;
@@ -102,8 +111,8 @@ p,
 }
 
 .button a {
-	background: #3f8b93;
-	border-radius: 2.5px;
+	background: #3d8a93;
+	border-radius: 2px;
 	box-sizing: border-box;
 	color: #fff;
 	display: inline-block;
@@ -116,23 +125,38 @@ p,
 	padding: 17px;
 	text-align: center;
 	text-transform: uppercase;
+	transition: background .4s ease, color .4s ease, border-color .4s ease;
 }
 
 .button.white a {
 	background: #fff;
-	color: rgb(76, 76, 76);
+	color: #404040;
 }
 
-.button.accent a {
-	background: rgb(84, 202, 210);
+.button.transparent a {
+	background: transparent;
+	border: 1px solid #3d8a93;
+	color: #3d8a93;
+}
+
+.button a:hover,
+.button.white a:hover,
+.button.transparent a:hover {
+	background: #4fcad3;
 	color: #fff;
 }
 
-main .hack-a-thon {
-	position: absolute;
-	right: 64px;
-	top: 38px;
-	z-index: 1;
+.button.transparent a:hover {
+	border-color: #4fcad3;
+}
+
+.button.crimson a {
+	background: #ca1237;
+	color: #fff;
+}
+
+.button.crimson a:hover {
+	background: #820c23;
 }
 
 html * {
@@ -176,6 +200,14 @@ section {
 	margin-right: 16px;
 }
 
+#site-header .logo-q {
+	transition: fill .4s ease;
+}
+
+#site-header .logo:hover .logo-q {
+	fill: #3d8a93;
+}
+
 #site-navigation {
 	margin: 0 0 0 auto;
 }
@@ -209,7 +241,32 @@ section {
 	font-size: .75em;
 	font-weight: 700;
 	height: 60px;
+	position: relative;
 	text-transform: uppercase;
+	transition: color .4s ease;
+}
+
+#top-menu a:hover {
+	color: #3d8a93;
+}
+
+#top-menu a:before {
+	background: #3d8a93;
+	content: "";
+	height: 5px;
+	left: 0;
+	margin: 0 auto;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: opacity .4s ease-in-out, width .4s ease-in-out;
+	width: 0;
+}
+
+#top-menu a:hover:before {
+	opacity: 1;
+	width: 100%;
 }
 
 #content {
@@ -220,30 +277,48 @@ section {
 	width: 100%;
 }
 
+.feature-link {
+	list-style: none;
+	margin-right: 64px;
+	position: absolute;
+	right: calc(50% - 50vw);
+	top: 38px;
+	z-index: 1;
+}
+
 .article-header {
-	background: rgb(84, 202, 210);
+	background: #4fcad3;
 	box-sizing: content-box;
 	left: calc(50% - 50vw);
-	padding: 48px 64px;
+	padding: 56px 64px;
 	position: relative;
 	width: 100vw;
 }
 
-.article-header[style] {
+.has-post-thumbnail .article-header {
 	background-position: center;
 	background-size: cover;
-	padding-top: 385px;
+	padding-bottom: 180px;
+	padding-top: 180px;
 }
 
-.article-header[style]:before {
-	background: linear-gradient(155deg, rgba(63, 139, 147, .8) 0%, rgba(63, 139, 147, .4) 10%, rgba(0, 0, 0, 0) 35%), linear-gradient(-45deg, rgba(63, 139, 147, .8) 0%, rgba(63, 139, 147, .4) 10%, rgba(0, 0, 0, 0) 35%);
+.has-post-thumbnail .article-header:before,
+.has-post-thumbnail .article-header:after {
 	content: "";
 	height: 100%;
 	left: 0;
-	mix-blend-mode: multiply;
 	position: absolute;
 	top: 0;
 	width: 100%;
+}
+
+.has-post-thumbnail .article-header:before {
+	background: linear-gradient(to right, #4fcad3 0%, transparent 100%);
+	mix-blend-mode: multiply;
+}
+
+.has-post-thumbnail .article-header:after {
+	background: url(images/bg-hero.png) bottom left no-repeat;
 }
 
 .article-header h1 {
@@ -252,6 +327,10 @@ section {
 	max-width: 1280px;
 	text-transform: uppercase;
 	position: relative;
+}
+
+.article-content {
+	padding: 120px 0;
 }
 
 .vertical-header {
@@ -352,75 +431,74 @@ section {
 	position: relative;
 }
 
-.hero > div:before,
-.hero > div:first-of-type:after {
+.hero > div:first-of-type:before,
+.hero > div:first-of-type:after,
+.hero > div:last-of-type:before {
 	content: "";
 	height: 100%;
-	left: calc(50% - (1922px / 2));
+	left: calc(50% - 50vw);
 	position: absolute;
-	top: 0;
-	width: 1922px;
+	top: -7.5vw;
+	-ms-transform: skew(0, -8.5deg);
+	    transform: skew(0, -8.5deg);
+	width: 100vw;
 }
 
 .hero > div:first-of-type:before {
-	background-image:
-		url(images/bg-hero.png),
-		linear-gradient(to right, rgba(63, 139, 147, 1) 0%, transparent 100%);
-	background-position: bottom left, top left;
-	background-repeat: no-repeat;
-	mix-blend-mode: multiply;
-	top: -149px;
+	background: linear-gradient(98.5deg, #4fcad3 0%, transparent 100%);
 }
 
 .hero > div:first-of-type:after {
-	background: linear-gradient(-171.5deg, transparent 0%, rgba(242, 242, 242, .85) 285px);
-	top: calc(100% - 140px);
-	z-index: 0;
-}
-
-.hero > div:first-of-type:before,
-.hero > div:first-of-type:after {
-	left: calc(50% - (2070px / 2));
-	-ms-transform: rotate(-8.5deg);
-	    transform: rotate(-8.5deg);
-	width: 2070px;
+	background: url(images/bg-hero.png) left bottom no-repeat;
 }
 
 .hero > div:last-of-type:before {
-	background: linear-gradient(to bottom, transparent 0%, rgba(242, 242, 242, 1) 50%);
+	background: linear-gradient(-171.5deg, transparent 0%, rgba(239, 240, 241, .7) 25%, #eff0f1 50%);
+	height: calc(100% + 15vw);
 }
 
-@supports ((-webkit-clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%)) or (clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%))) {
+@supports ((-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 15vw), 0% 100%)) or (clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 15vw), 0% 100%))) {
 
 	.hero > div:first-of-type:before,
-	.hero > div:first-of-type:after {
+	.hero > div:first-of-type:after,
+	.hero > div:last-of-type:before {
+		bottom: 0;
+		content: "";
+		height: 100%;
 		left: calc(50% - 50vw);
+		position: absolute;
 		top: 0;
 		-ms-transform: none;
 		    transform: none;
 		width: 100vw;
 	}
 
-	.hero > div:first-of-type:before {
+	.hero > div:first-of-type:before,
+	.hero > div:first-of-type:after {
 		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 15vw), 0% 100%);
 		        clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 15vw), 0% 100%);
 	}
 
+	.hero > div:first-of-type:before {
+		background: linear-gradient(to right, #4fcad3 0%, transparent 100%);
+		mix-blend-mode: multiply;
+	}
+
 	.hero > div:first-of-type:after {
-		background: linear-gradient(to bottom, transparent calc(100% - 15vw), rgba(242, 242, 242, .85) 100%);
-		-webkit-clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%);
-		        clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%);
+		background: url(images/bg-hero.png) bottom left no-repeat;
 	}
 
 	.hero > div:last-of-type:before {
-		background: linear-gradient(to bottom, rgba(242, 242, 242, .85) 0%, rgba(242, 242, 242, 1) 50%);
-		left: calc(50% - 50vw);
-		width: 100vw;
+		background: linear-gradient(to bottom, transparent 0%, rgba(239, 240, 241, .85) 40%, #eff0f1 60%);
+		-webkit-clip-path: polygon(0% 15vw, 100% 0%, 100% 100%, 0% 100%);
+		        clip-path: polygon(0% 15vw, 100% 0%, 100% 100%, 0% 100%);
+		height: calc(100% + 15vw);
+		top: -15vw;
 	}
 }
 
 .hero > div:last-of-type:after {
-	background: #3f8b93;
+	background: #3d8a93;
 	content: "";
 	height: 230px;
 	left: 0;
@@ -479,8 +557,26 @@ section {
 	background: url(images/bg-blue-dark-fade.png) repeat-x;
 }
 
+.divider {
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+	left: calc(50% - 50vw);
+	position: relative;
+	width: 100vw;
+}
+
+.divider:before {
+	background: linear-gradient(to right, #ca1237 0%, transparent 100%);
+	content: "";
+	height: 100%;
+	mix-blend-mode: multiply;
+	position: absolute;
+	width: 100%;
+}
+
 #site-footer {
-	background: #313131;
+	background: #333;
 	color: #fff;
 	overflow: hidden;
 	padding: 0 64px;
@@ -498,7 +594,7 @@ section {
 }
 
 #site-footer div + div {
-	border-top: 1px solid #4c4c4c;
+	border-top: 1px solid #404040;
 	padding: 10px 28px;
 }
 
@@ -537,9 +633,13 @@ section {
 	padding-top: 9px;
 }
 
-#site-footer .hack-a-thon,
+#site-footer .feature-link,
 .channels {
 	margin: 0 0 0 auto;
+}
+
+#site-footer .feature-link {
+	position: static;
 }
 
 #site-footer .logo {
@@ -555,11 +655,28 @@ section {
 }
 
 .channels li + li {
-	padding-left: 20px;
+	padding-left: 18px;
 }
 
 .channels .back-to-top {
 	padding: 0 10px 0 30px;
+}
+
+.channels .icon {
+	fill: #fff;
+	height: 14px;
+	margin-top: 4px;
+	width: 14px;
+}
+
+.channels .icon-facebook {
+	height: 13px;
+	margin-top: 5px;
+}
+
+.channels .icon-twitter {
+	height: 16px;
+	margin-top: 3px;
 }
 
 #svg-symbols {
