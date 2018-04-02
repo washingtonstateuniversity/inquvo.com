@@ -252,66 +252,65 @@ section {
 	position: relative;
 }
 
-.hero > div:before,
-.hero > div:first-of-type:after {
+.hero > div:first-of-type:before,
+.hero > div:first-of-type:after,
+.hero > div:last-of-type:before {
 	content: "";
 	height: 100%;
-	left: calc(50% - (1922px / 2));
+	left: calc(50% - 50vw);
 	position: absolute;
-	top: 0;
-	width: 1922px;
+	top: -7.5vw;
+	transform: skew(0, -8.5deg);
+	width: 100vw;
 }
 
 .hero > div:first-of-type:before {
-	background-image:
-		url(images/bg-hero.png),
-		linear-gradient(to right, var(--color-teal-accent) 0%, transparent 100%);
-	background-position: bottom left, top left;
-	background-repeat: no-repeat;
-	mix-blend-mode: multiply;
-	top: -149px;
+	background: linear-gradient(98.5deg, var(--color-teal-accent) 0%, transparent 100%);
 }
 
 .hero > div:first-of-type:after {
-	background: linear-gradient(-171.5deg, transparent 0%, rgba(242, 242, 242, .85) 285px);
-	top: calc(100% - 140px);
-	z-index: 0;
-}
-
-.hero > div:first-of-type:before,
-.hero > div:first-of-type:after {
-	left: calc(50% - (2070px / 2));
-	transform: rotate(-8.5deg);
-	width: 2070px;
+	background: url(images/bg-hero.png) left bottom no-repeat;
 }
 
 .hero > div:last-of-type:before {
-	background: linear-gradient(to bottom, transparent 0%, rgba(242, 242, 242, 1) 50%);
+	background: linear-gradient(-171.5deg, transparent 0%, rgba(239, 240, 241, .7) 25%, #eff0f1 50%);
+	height: calc(100% + 15vw);
 }
 
-@supports (-webkit-clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%)) or (clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%)) {
+@supports (-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 15vw), 0% 100%)) or (clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 15vw), 0% 100%)) {
 
 	.hero > div:first-of-type:before,
-	.hero > div:first-of-type:after {
+	.hero > div:first-of-type:after,
+	.hero > div:last-of-type:before {
+		bottom: 0;
+		content: "";
+		height: 100%;
 		left: calc(50% - 50vw);
+		position: absolute;
 		top: 0;
 		transform: none;
 		width: 100vw;
 	}
 
-	.hero > div:first-of-type:before {
+	.hero > div:first-of-type:before,
+	.hero > div:first-of-type:after {
 		clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 15vw), 0% 100%);
 	}
 
+	.hero > div:first-of-type:before {
+		background: linear-gradient(to right, var(--color-teal-accent) 0%, transparent 100%);
+		mix-blend-mode: multiply;
+	}
+
 	.hero > div:first-of-type:after {
-		background: linear-gradient(to bottom, transparent calc(100% - 15vw), rgba(242, 242, 242, .85) 100%);
-		clip-path: polygon(0% 100%, 100% calc(100% - 15vw), 100% 100%, 0% 100%);
+		background: url(images/bg-hero.png) bottom left no-repeat;
 	}
 
 	.hero > div:last-of-type:before {
-		background: linear-gradient(to bottom, rgba(242, 242, 242, .85) 0%, rgba(242, 242, 242, 1) 50%);
-		left: calc(50% - 50vw);
-		width: 100vw;
+		background: linear-gradient(to bottom, transparent 0%, rgba(239, 240, 241, .85) 40%, #eff0f1 60%);
+		clip-path: polygon(0% 15vw, 100% 0%, 100% 100%, 0% 100%);
+		height: calc(100% + 15vw);
+		top: -15vw;
 	}
 }
 
