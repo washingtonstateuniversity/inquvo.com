@@ -12,7 +12,7 @@
 
 	<header id="site-header">
 
-		<a href="<?php echo esc_url( home_url() ); ?>" class="logo" aria-label="InQuvo home">
+		<a href="<?php echo esc_url( home_url() ); ?>" class="logo" aria-label="Inquvo home">
 			<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28">
 				<use xlink:href="#icon-dots" />
 			</svg>

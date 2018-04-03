@@ -47,6 +47,6 @@ function inquvo_styles() {
 	wp_dequeue_style( 'twentyseventeen-style' );
 	wp_dequeue_style( 'twentyseventeen-ie8' );
 
-	// Enqueue InQuvo styles with theme version.
+	// Enqueue Inquvo styles with theme version.
 	wp_enqueue_style( 'inquvo-style', get_stylesheet_directory_uri() . '/style.css', array(), inquvo_theme_version() );
 }
