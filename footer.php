@@ -24,14 +24,14 @@
 
 		<div>
 
-			<a href="<?php echo esc_url( home_url() ); ?>" class="logo" aria-label="InQuvo">
+			<a href="<?php echo esc_url( home_url() ); ?>" class="logo" aria-label="Inquvo">
 				<svg xmlns="http://www.w3.org/2000/svg" width="90" height="20" viewBox="0 0 229 50">
 					<use xlink:href="#logo-inuvo" fill="#fff" />
 					<use xlink:href="#logo-q" fill="#54cad2" />
 				</svg>
 			</a>
 
-			<p>&copy; <?php echo esc_html( date( 'Y' ) ); ?> InQuvo. All Rights Reserved.</p>
+			<p>&copy; <?php echo esc_html( date( 'Y' ) ); ?> Inquvo. All Rights Reserved.</p>
 
 			<?php if ( has_nav_menu( 'social' ) ) { ?>
 
