@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+	<g class="open">
+		<path stroke="#404040" stroke-width="4" d="M0 4h32"/>
+		<path stroke="#404040" stroke-width="4" d="M0 16h32"/>
+		<path stroke="#404040" stroke-width="4" d="M0 28h32"/>
+	</g>
+	<g class="close">
+		<path stroke="#ca1237" stroke-width="4" d="M3.436 3.436l25.128 25.128"/>
+		<path stroke="#ca1237" stroke-width="4" d="M3.436 28.564L28.564 3.436"/>
+	</g>
+</svg>
