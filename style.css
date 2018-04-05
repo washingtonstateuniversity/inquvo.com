@@ -676,6 +676,30 @@ section {
 	background: url(images/bg-blue-dark-fade.png) repeat-x;
 }
 
+.background-halves,
+.background-halves * {
+	position: relative;
+	z-index: 1;
+}
+
+.background-halves:before,
+.background-halves:after {
+	content: "";
+	left: 50%;
+	position: absolute;
+	height: 100%;
+	width: 50vw;
+}
+
+.background-halves:before {
+	background: url(images/bg-large.png) bottom right no-repeat;
+	margin-left: -50vw;
+}
+
+.background-halves:after {
+	background: #eff0f1;
+}
+
 .divider {
 	left: calc(50% - 50vw);
 	position: relative;
