@@ -21,14 +21,29 @@
 			</svg>
 			<svg xmlns="http://www.w3.org/2000/svg" width="90" height="20" viewBox="0 0 229 50">
 				<use xlink:href="#logo-inuvo" fill="#404040" />
-				<use xlink:href="#logo-q" fill="#404040" />
+				<use xlink:href="#logo-q" fill="#404040" class="logo-q" />
 			</svg>
 		</a>
 
 		<nav id="site-navigation" role="navigation" aria-label="Top Menu">
 
+			<button id="js-menu-toggle" aria-controls="top-menu" aria-expanded="false">
+				<span class="screen-reader-text">Toggle site menu</span>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true">
+					<g class="open">
+						<path stroke="#404040" stroke-width="4" stroke-dasharray="32" d="M0 4h32"/>
+						<path stroke="#404040" stroke-width="4" stroke-dasharray="32" d="M0 16h32"/>
+						<path stroke="#404040" stroke-width="4" stroke-dasharray="32" d="M0 28h32"/>
+					</g>
+					<g class="close">
+						<path stroke="#ca1237" stroke-width="4" stroke-dasharray="36" stroke-dashoffset="36" d="M3.436 3.436l25.128 25.128"/>
+						<path stroke="#ca1237" stroke-width="4" stroke-dasharray="36" stroke-dashoffset="36" d="M3.436 28.564L28.564 3.436"/>
+					</g>
+				</svg>
+			</button>
+
 			<ul id="top-menu">
-				<li><a href="#">What We Do</a></li>
+				<li class="current-menu-item"><a href="#">What We Do</a></li>
 				<li><a href="#">Partner With Us</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">News</a></li>
@@ -104,7 +119,9 @@
 
 			</nav>
 
-			<p class="button accent hack-a-thon"><a href="#">Hack-a-thon﻿</a></p>
+			<p class="button crimson feature-link">
+				<a href="#">Hack-a-thon</a>
+			</p>
 
 		</div>
 
@@ -207,6 +224,8 @@
 			</svg>
 		</defs>
 	</svg>
+
+	<script type="text/javascript" src="../js/script.js"></script>
 
 </body>
 
