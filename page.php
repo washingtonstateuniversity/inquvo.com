@@ -5,7 +5,7 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 		<?php if ( has_post_thumbnail() ) { ?>
-		<header class="article-header featured-image" style="background-image:url(<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?> );">
+		<header class="article-header parallax" style="background-image:url(<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?> );">
 		<?php } else { ?>
 		<header class="article-header">
 		<?php } ?>
