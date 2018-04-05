@@ -13,7 +13,7 @@
 	<header id="site-header">
 
 		<a href="<?php echo esc_url( home_url() ); ?>" class="logo" aria-label="Inquvo home">
-			<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+			<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" class="dots">
 				<use xlink:href="#icon-dots" />
 			</svg>
 			<svg xmlns="http://www.w3.org/2000/svg" width="90" height="20" viewBox="0 0 229 50">
@@ -25,6 +25,21 @@
 		<?php if ( has_nav_menu( 'top' ) ) { ?>
 
 		<nav id="site-navigation" role="navigation" aria-label="<?php esc_html_e( 'Top Menu', 'twentyseventeen' ); ?>">
+
+			<button id="js-menu-toggle" aria-controls="top-menu" aria-expanded="false">
+				<span class="screen-reader-text">Toggle site menu</span>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true">
+					<g class="open">
+						<path stroke="#404040" stroke-width="4" stroke-dasharray="32" d="M0 4h32"/>
+						<path stroke="#404040" stroke-width="4" stroke-dasharray="32" d="M0 16h32"/>
+						<path stroke="#404040" stroke-width="4" stroke-dasharray="32" d="M0 28h32"/>
+					</g>
+					<g class="close">
+						<path stroke="#ca1237" stroke-width="4" stroke-dasharray="36" stroke-dashoffset="36" d="M3.436 3.436l25.128 25.128"/>
+						<path stroke="#ca1237" stroke-width="4" stroke-dasharray="36" stroke-dashoffset="36" d="M3.436 28.564L28.564 3.436"/>
+					</g>
+				</svg>
+			</button>
 
 			<?php
 			wp_nav_menu( array(
