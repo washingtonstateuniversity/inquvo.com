@@ -85,10 +85,11 @@ section {
 	height: 60px;
 	position: relative;
 	text-transform: uppercase;
-	transition: color .4s ease;
+	transition: color .3s ease;
 }
 
-#top-menu a:hover {
+#top-menu a:hover,
+#top-menu .current-menu-item a {
 	color: var(--color-teal);
 }
 
@@ -102,11 +103,12 @@ section {
 	position: absolute;
 	right: 0;
 	top: 0;
-	transition: opacity .4s ease-in-out, width .4s ease-in-out;
+	transition: opacity .3s ease-in-out, width .3s ease-in-out;
 	width: 0;
 }
 
-#top-menu a:hover:before {
+#top-menu a:hover:before,
+#top-menu .current-menu-item a:before {
 	opacity: 1;
 	width: 100%;
 }
@@ -254,6 +256,7 @@ section {
 }
 
 .has-post-thumbnail .article-header {
+	background-color: var(--color-crimson-accent);
 	background-position: center;
 	background-size: cover;
 	padding-bottom: 180px;
@@ -271,7 +274,7 @@ section {
 }
 
 .has-post-thumbnail .article-header:before {
-	background: linear-gradient(to right, var(--color-teal-accent) 0%, transparent 100%);
+	background: linear-gradient(to right, var(--color-crimson-accent) 0%, transparent 100%);
 	mix-blend-mode: multiply;
 }
 
@@ -375,6 +378,7 @@ section {
 
 .hero > div * {
 	position: relative;
+	z-index: 1;
 }
 
 .hero > div:first-of-type:before,
