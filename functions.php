@@ -47,6 +47,9 @@ function inquvo_scripts() {
 	wp_dequeue_style( 'twentyseventeen-style' );
 	wp_dequeue_style( 'twentyseventeen-ie8' );
 
+	// Enqueue the Montserrat font family stylesheet.
+	wp_enqueue_style( 'montserrat', '//fonts.googleapis.com/css?family=Montserrat:200,200i,400,400i,500,600,700' );
+
 	// Enqueue Inquvo styles with theme version.
 	wp_enqueue_style( 'inquvo-style', get_stylesheet_directory_uri() . '/style.css', array(), inquvo_theme_version() );
 
