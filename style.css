@@ -660,6 +660,7 @@ section {
 }
 
 .background-texture:before {
+	background-repeat: repeat-x;
 	content: "";
 	height: 100%;
 	left: calc(50% - 50vw);
@@ -669,11 +670,16 @@ section {
 }
 
 .background-texture.blue-light-fade:before {
-	background: url(images/bg-blue-light-fade.png) repeat-x;
+	background-image: url(images/bg-blue-light-fade.png);
 }
 
 .background-texture.blue-dark-fade:before {
-	background: url(images/bg-blue-dark-fade.png) repeat-x;
+	background-image: url(images/bg-blue-dark-fade.png);
+}
+
+.background-texture.blue-dark-fade-reverse:before {
+	background-image: url(images/bg-blue-dark-fade-reverse.png);
+	background-position: bottom;
 }
 
 .background-halves,
