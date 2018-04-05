@@ -194,10 +194,19 @@ section {
 	    align-items: center;
 	display: -ms-flexbox;
 	display: flex;
+	padding-left: 44px;
+	position: relative;
 }
 
-#site-header .logo svg:first-of-type {
-	margin-right: 16px;
+#site-header .logo .dots {
+	left: 0;
+	position: absolute;
+	transition: transform .3s ease-in-out;
+}
+
+#site-header .logo:hover .dots {
+	-ms-transform: rotate(360deg);
+	    transform: rotate(360deg);
 }
 
 #site-header .logo-q {
@@ -635,7 +644,7 @@ section {
 
 .dots-above:before,
 .dots-below:after {
-	background: url(images/icon-dots.svg);
+	background: url(images/icon-dots.svg) no-repeat;
 	content: "";
 	height: 28px;
 	left: 0;
