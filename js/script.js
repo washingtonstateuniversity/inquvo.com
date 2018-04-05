@@ -15,4 +15,23 @@
 	};
 
 	document.getElementById( "js-menu-toggle" ).addEventListener( "click", toggle_menu );
+
+	let parallax_elements = Array.from( document.getElementsByClassName( "parallax" ) );
+
+	let parallax = function() {
+		parallax_elements.forEach( element => {
+			let container = element.getBoundingClientRect();
+			let container_center = container.top + ( container.height / 2 );
+			let viewport_center = window.innerHeight / 2;
+			let y = ( container_center - viewport_center ) / 10;
+
+			if ( window.innerHeight > container.top && 0 < container.bottom ) {
+				element.style.backgroundPositionY = "calc(50% + " + y + "px)";
+			}
+		} );
+	};
+
+	window.addEventListener( "scroll", function() {
+		window.requestAnimationFrame( parallax );
+	} );
 }() );
