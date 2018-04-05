@@ -34,4 +34,6 @@
 	window.addEventListener( "scroll", function() {
 		window.requestAnimationFrame( parallax );
 	} );
+
+	document.addEventListener( "DOMContentLoaded", parallax );
 }() );
