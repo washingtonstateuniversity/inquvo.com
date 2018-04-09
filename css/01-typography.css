@@ -60,22 +60,27 @@ a {
 	z-index: 100000;
 }
 
-.hero > div:first-of-type {
-	color: #fff;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: none;
+}
+
+h1,
+.article-header h1 {
+	font-size: 2.8em;
+	font-weight: 700;
 }
 
 h2 {
-	font-size: 16px;
+	font-size: 1.875em;
 	font-weight: 500;
-	letter-spacing: .4em;
 	margin: 0;
 	padding: 18px 0 65px;
 	position: relative;
-	text-transform: uppercase;
-}
-
-p + h2 {
-	padding-top: 65px;
 }
 
 h2:after {
@@ -88,41 +93,148 @@ h2:after {
 	width: 70px;
 }
 
-.hero h2:after {
-	margin: 0 auto;
-	right: 0;
+.article-content div + h2,
+.article-content p + div {
+	margin-top: 120px;
 }
 
-.hero > div:first-of-type h2:after {
-	background-color: #fff;
-}
-
-p,
-.site-content p:first-of-type {
-	font-size: 22px;
+h3 {
 	font-weight: 400;
-	line-height: 1.65;
+	font-size: 1.25em;
+}
+
+h4 {
+	font-size: .9em;
+	font-weight: 400;
+}
+
+h5 {
+	font-size: .85em;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+h6 {
+	font-size: .85em;
+	font-weight: 600;
+}
+
+p {
+	font-size: .9em;
+	font-weight: 300;
+	line-height: 2.4;
 	margin: 0;
 	padding: 0 0 1em;
 }
 
-.hero p {
-	text-align: center;
+.article-content ul {
+	padding: 0 0 1em 2em;
 }
 
-.site-content p,
-.hero > div:first-of-type p {
-	font-size: 16px;
-	line-height: 2.3;
+.article-content ul li {
+	list-style: none;
+	position: relative;
+}
+
+.article-content ol li,
+.article-content ul li {
+	font-size: .9em;
+	font-weight: 300;
+	line-height: 1.75;
+	padding: 0 0 .5em;
+}
+
+.article-content ul li:before {
+	background: #a31d36;
+	content: "";
+	height: 2px;
+	left: -1.25em;
+	position: absolute;
+	top: 13px;
+	width: 8px;
+}
+
+b,
+strong {
+	font-weight: 600;
+}
+
+a {
+	color: var(--color-teal-accent);
+	font-weight: 400;
+	position: relative;
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--color-teal-accent);
+}
+
+a:after {
+	background: rgba(79, 202, 211, .3);
+	bottom: -1px;
+	content: "";
+	height: 50%;
+	left: 0;
+	position: absolute;
+	transition: width .3s;
+	width: 0;
+}
+
+a:hover:after {
+	width: 100%;
+}
+
+a.logo:after {
+	content: none;
+}
+
+#top-menu a {
+	color: rgb(76, 76, 76);
+	font-size: .75em;
+	font-weight: 700;
+	position: relative;
+	text-transform: uppercase;
+	transition: color .3s ease;
+}
+
+#top-menu a:hover,
+#top-menu .current-menu-item a {
+	color: var(--color-teal);
+}
+
+#top-menu a:before {
+	background: var(--color-teal);
+	content: "";
+	height: 5px;
+	left: 0;
+	margin: 0 auto;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: opacity .3s ease-in-out, width .3s ease-in-out;
+	width: 0;
+}
+
+#top-menu a:hover:before,
+#top-menu .current-menu-item a:before {
+	opacity: 1;
+	width: 100%;
+}
+
+#top-menu a:after {
+	content: none;
 }
 
 .button a {
 	background: var(--color-teal);
 	border-radius: 2px;
+	box-shadow: 0 0 0 transparent;
 	box-sizing: border-box;
 	color: #fff;
 	display: inline-block;
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: 500;
 	line-height: 1.2;
 	margin-top: 6px;
@@ -131,7 +243,11 @@ p,
 	padding: 17px;
 	text-align: center;
 	text-transform: uppercase;
-	transition: background .4s ease, color .4s ease, border-color .4s ease;
+	transition: background-color .3s ease, transform .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.button a:after {
+	content: none;
 }
 
 .button.white a {
@@ -149,7 +265,9 @@ p,
 .button.white a:hover,
 .button.transparent a:hover {
 	background: var(--color-teal-accent);
+	box-shadow: 0 3px 15px rgba(0, 0, 0, .2);
 	color: #fff;
+	transform: translateY(-3px);
 }
 
 .button.transparent a:hover {
@@ -163,4 +281,63 @@ p,
 
 .button.crimson a:hover {
 	background: var(--color-crimson-dark);
+}
+
+#site-footer {
+	color: #fff;
+}
+
+.footer-menu a {
+	color: #fff;
+	transition: color .3s;
+}
+
+.footer-menu a:hover {
+	color: var(--color-teal-accent);
+}
+
+.footer-menu > ul > li > a {
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.article-header h1 {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.home article > :not(div),
+.article-content > :not(div) {
+	max-width: 800px;
+}
+
+.home h2 {
+	font-size: .9em;
+	letter-spacing: .4em;
+	text-transform: uppercase;
+}
+
+p.intro,
+.hero p {
+	font-weight: 100;
+	font-size: 1.2rem;
+	line-height: 1.75;
+}
+
+.hero h2:after {
+	margin: 0 auto;
+	right: 0;
+}
+
+.hero > div:first-of-type {
+	color: #fff;
+}
+
+.hero > div:first-of-type h2:after {
+	background-color: #fff;
+}
+
+.hero p {
+	text-align: center;
 }
