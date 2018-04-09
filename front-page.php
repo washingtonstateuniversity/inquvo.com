@@ -4,11 +4,7 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<div class="article-content">
-
-			<?php the_content(); ?>
-
-		</div>
+		<?php the_content(); ?>
 
 	</article>
 
