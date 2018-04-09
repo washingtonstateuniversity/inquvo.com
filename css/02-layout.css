@@ -3,7 +3,7 @@ html * {
 }
 
 body {
-	margin: 0;
+	margin: 60px 0;
 }
 
 article,
@@ -17,10 +17,24 @@ section {
 }
 
 #site-header {
-	margin: 0 auto;
-	max-width: 1920px;
+	background: rgba(255, 255, 255, .97);
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
 	padding: 0 64px;
+	position: fixed;
+	top: 0;
 	width: 100%;
+	z-index: 2;
+}
+
+.admin-bar #site-header {
+	top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+
+	.admin-bar #site-header {
+		top: 46px;
+	}
 }
 
 #site-header {
@@ -35,8 +49,11 @@ section {
 }
 
 #site-header .logo .dots {
+	bottom: 0;
 	left: 0;
+	margin: auto;
 	position: absolute;
+	top: 0;
 	transition: transform .3s ease-in-out;
 }
 
@@ -78,49 +95,14 @@ section {
 
 #top-menu a {
 	align-items: center;
-	color: rgb(76, 76, 76);
 	display: flex;
-	font-size: .75em;
-	font-weight: 700;
 	height: 60px;
-	position: relative;
-	text-transform: uppercase;
-	transition: color .3s ease;
-}
-
-#top-menu a:hover,
-#top-menu .current-menu-item a {
-	color: var(--color-teal);
-}
-
-#top-menu a:before {
-	background: var(--color-teal);
-	content: "";
-	height: 5px;
-	left: 0;
-	margin: 0 auto;
-	opacity: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-	transition: opacity .3s ease-in-out, width .3s ease-in-out;
-	width: 0;
-}
-
-#top-menu a:hover:before,
-#top-menu .current-menu-item a:before {
-	opacity: 1;
-	width: 100%;
 }
 
 @media screen and (max-width: 900px) {
 
 	.menu-open {
 		overflow: hidden;
-	}
-
-	#site-header {
-		position: relative;
 	}
 
 	#js-menu-toggle {
@@ -283,10 +265,8 @@ section {
 }
 
 .article-header h1 {
-	color: #fff;
 	margin: 0 auto;
-	max-width: 1280px;
-	text-transform: uppercase;
+	max-width: 1152px;
 	position: relative;
 }
 
@@ -321,18 +301,16 @@ section {
 	padding: 120px 0;
 }
 
-.side-right,
-.thirds {
-	display: flex;
+.wp-block-columns.has-2-columns.sidebar-right {
+	grid-auto-columns: 70% 30%;
 }
 
-.side-right > div,
-.thirds > div {
-	flex: 1 1 auto;
+.layout-column-1 {
+	padding-right: 20px;
 }
 
-.side-right > div:first-of-type {
-	width: 70%;
+.layout-column-2 {
+	padding-left: 20px;
 }
 
 .hero {
@@ -557,13 +535,8 @@ section {
 
 #site-footer {
 	background: var(--color-gray-80);
-	color: #fff;
 	overflow: hidden;
 	padding: 0 64px;
-}
-
-#site-footer a {
-	color: #fff;
 }
 
 #site-footer div {
@@ -596,11 +569,6 @@ section {
 
 .footer-menu > ul > li:first-of-type {
 	margin-right: 110px;
-}
-
-.footer-menu > ul > li > a {
-	font-weight: 600;
-	text-transform: uppercase;
 }
 
 .footer-menu ul ul {

@@ -1,0 +1,202 @@
+main input,
+main textarea {
+	appearance: none;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid rgba(64, 64, 64, .1);
+	border-radius: 0;
+	color: var(--color-gray-75);
+	font-family: Montserrat, sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	height: 50px;
+	padding: 0 0 0 10px;
+	transition: border-bottom .3s ease-in-out;
+	width: 100%;
+}
+
+main input:hover,
+main textarea:hover {
+	border-bottom-color: var(--color-gray-75);
+}
+
+main input:focus,
+main textarea:focus {
+	border-bottom-color: var(--color-crimson);
+	outline: none;
+}
+
+main textarea,
+main textarea:focus {
+	line-height: 1.5;
+	min-height: 0;
+	overflow: auto;
+	padding-top: 1.5em;
+	resize: none;
+}
+
+::placeholder {
+	color: var(--color-gray-75);
+	font-family: Montserrat, sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	opacity: 1;
+}
+
+main button,
+main input[type="submit"] {
+	appearance: none;
+	background: var(--color-crimson-accent);
+	border: none;
+	border-radius: 2px;
+	box-shadow: 0 0 0 transparent;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1.2;
+	margin-top: 6px;
+	min-height: 50px;
+	min-width: 190px;
+	padding: 17px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: background-color .3s ease, transform .3s ease-in-out, box-shadow .3s ease-in-out;
+	width: auto;
+}
+
+main button:hover,
+main button:focus,
+main input[type="submit"]:hover,
+main input[type="submit"]:focus {
+	background: var(--color-crimson-dark);
+	border: none;
+	box-shadow: 0 3px 15px rgba(0, 0, 0, .2);
+	transform: translateY(-3px);
+}
+
+main input[type="checkbox"],
+main input[type="radio"] {
+	display: none;
+}
+
+main input[type="checkbox"] + label,
+main input[type="radio"] + label {
+	padding-left: 22px;
+	position: relative;
+}
+
+main input[type="checkbox"] + label:before,
+main input[type="radio"] + label:before {
+	border: 1px solid rgba(64, 64, 64, .2);
+	border-radius: 0;
+	box-sizing: border-box;
+	content: "";
+	cursor: pointer;
+	display: inline-block;
+	height: 14px;
+	left: 0;
+	margin-top: -7px;
+	position: absolute;
+	top: 50%;
+	transition: .15s;
+	width: 14px;
+}
+
+main input[type="radio"] + label:before {
+	border-radius: 100%;
+}
+
+main input[type="checkbox"] + label:hover:before {
+	border: 1px solid #b7203d;
+	transition: all .3s ease-in-out;
+}
+
+main input[type="checkbox"]:checked + label:before {
+	background: #a31d36;
+	border-color: #a31d36;
+}
+
+main input[type="radio"] + label:after {
+	background-color: #fff;
+	border-radius: 100%;
+	content: "";
+	height: 6px;
+	left: 4px;
+	margin-top: -3px;
+	position: absolute;
+	top: 50%;
+	transition: all .3s ease-in-out;
+	width: 6px;
+}
+
+main input[type="radio"] + label:hover:after,
+main input[type="radio"]:checked + label:after {
+	background-color: var(--color-crimson);
+}
+
+main label {
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 300;
+	margin: 0 10px;
+	padding: 0;
+}
+
+.gform_wrapper {
+	max-width: 800px;
+}
+
+.article-content .gform_body li:before {
+	content: none;
+}
+
+.gform_body ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.hide-label label,
+.hide-sub-labels span label {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal;
+}
+
+.hide-label .ginput_container_textarea {
+	padding-top: 10px;
+}
+
+.gfield_label {
+	font-weight: 400;
+}
+
+.ginput_counter {
+	font-size: 14px;
+	font-weight: 300;
+	text-align: right;
+}
+
+.gfield.padded-top {
+	padding-top: 20px;
+}
+
+.ginput_container ul {
+	padding: 20px 0 0 20px;
+}
+
+.ginput_container li {
+	padding-bottom: 8px;
+}
+
+.gform_footer {
+	padding: 20px 0;
+}
