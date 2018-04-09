@@ -59,10 +59,10 @@ h6 {
 	text-transform: none;
 }
 
-h1,
-.article-header h1 {
+h1 {
 	font-size: 2.8em;
 	font-weight: 700;
+	margin: 0;
 }
 
 h2 {
@@ -291,9 +291,16 @@ main a:hover:after,
 	text-transform: uppercase;
 }
 
-.article-header h1 {
+.article-header h1,
+.archive-header h1 {
 	color: #fff;
 	text-transform: uppercase;
+}
+
+#primary h1 {
+	letter-spacing: 0;
+	font-size: 1.875em;
+	font-weight: 500;
 }
 
 .home article > :not(div),
@@ -571,7 +578,8 @@ section {
 	z-index: 1;
 }
 
-.article-header {
+.article-header,
+.archive-header {
 	background: #4fcad3;
 	left: calc(50% - 50vw);
 	padding: 56px 64px;
@@ -606,7 +614,8 @@ section {
 	background: url(images/bg-hero.png) bottom left no-repeat;
 }
 
-.article-header h1 {
+.article-header h1,
+.archive-header h1 {
 	margin: 0 auto;
 	max-width: 1152px;
 	position: relative;
@@ -887,6 +896,21 @@ section {
 	mix-blend-mode: multiply;
 	position: absolute;
 	width: 100%;
+}
+
+.archive-columns {
+	display: -ms-flexbox;
+	display: flex;
+	padding: 120px 0;
+}
+
+#primary {
+	padding-right: 32px;
+	width: 70%;
+}
+
+#secondary {
+	padding-left: 32px;
 }
 
 #site-footer {

@@ -229,7 +229,8 @@ section {
 	z-index: 1;
 }
 
-.article-header {
+.article-header,
+.archive-header {
 	background: var(--color-teal-accent);
 	left: calc(50% - 50vw);
 	padding: 56px 64px;
@@ -264,7 +265,8 @@ section {
 	background: url(images/bg-hero.png) bottom left no-repeat;
 }
 
-.article-header h1 {
+.article-header h1,
+.archive-header h1 {
 	margin: 0 auto;
 	max-width: 1152px;
 	position: relative;
@@ -531,6 +533,20 @@ section {
 	mix-blend-mode: multiply;
 	position: absolute;
 	width: 100%;
+}
+
+.archive-columns {
+	display: flex;
+	padding: 120px 0;
+}
+
+#primary {
+	padding-right: 32px;
+	width: 70%;
+}
+
+#secondary {
+	padding-left: 32px;
 }
 
 #site-footer {
