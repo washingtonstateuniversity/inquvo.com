@@ -32,8 +32,6 @@ function inquvo_setup() {
 
 	remove_image_size( 'twentyseventeen-featured-image' );
 	remove_image_size( 'twentyseventeen-thumbnail-avatar' );
-
-	remove_action( 'widgets_init', 'twentyseventeen_widgets_init' );
 }
 
 /**
