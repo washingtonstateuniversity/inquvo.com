@@ -22,10 +22,6 @@ body {
 	font-family: Montserrat, sans-serif;
 }
 
-a {
-	text-decoration: none;
-}
-
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	height: 1px;
@@ -154,17 +150,22 @@ strong {
 }
 
 a {
-	color: #4fcad3;
-	font-weight: 400;
-	position: relative;
 	text-decoration: none;
 }
 
-a:hover {
+main a,
+.footer-menu a {
+	color: #4fcad3;
+	font-weight: 400;
+	position: relative;
+}
+
+main a:hover {
 	color: #4fcad3;
 }
 
-a:after {
+main a:after,
+.footer-menu a:after {
 	background: rgba(79, 202, 211, .3);
 	bottom: -1px;
 	content: "";
@@ -175,12 +176,9 @@ a:after {
 	width: 0;
 }
 
-a:hover:after {
+main a:hover:after,
+.footer-menu a:hover:after {
 	width: 100%;
-}
-
-a.logo:after {
-	content: none;
 }
 
 #top-menu a {
@@ -215,10 +213,6 @@ a.logo:after {
 #top-menu .current-menu-item a:before {
 	opacity: 1;
 	width: 100%;
-}
-
-#top-menu a:after {
-	content: none;
 }
 
 .button a {
