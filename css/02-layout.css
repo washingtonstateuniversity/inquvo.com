@@ -231,7 +231,7 @@ section {
 
 .article-header,
 .archive-header {
-	background: var(--color-teal-accent);
+	background: var(--color-teal);
 	left: calc(50% - 50vw);
 	padding: 56px 64px;
 	position: relative;
