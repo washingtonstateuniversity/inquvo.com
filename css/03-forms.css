@@ -149,7 +149,7 @@ main label {
 	max-width: 800px;
 }
 
-.article-content .gform_body li:before {
+.gform_body li:before {
 	content: none;
 }
 

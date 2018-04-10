@@ -116,37 +116,38 @@ h6 {
 }
 
 p {
-	font-size: .9em;
+	font-size: .98em;
 	font-weight: 300;
 	line-height: 2.4;
 	margin: 0;
 	padding: 0 0 1em;
 }
 
-.article-content ul {
+main ul,
+main ol {
 	padding: 0 0 1em 2em;
 }
 
-.article-content ul li {
+main ul li {
 	list-style: none;
 	position: relative;
 }
 
-.article-content ol li,
-.article-content ul li {
+main ol li,
+main ul li {
 	font-size: .9em;
 	font-weight: 300;
 	line-height: 1.75;
 	padding: 0 0 .5em;
 }
 
-.article-content ul li:before {
-	background: #a31d36;
+main ul li:before {
 	content: "";
-	height: 2px;
-	left: -1.25em;
 	position: absolute;
+	left: -1.25em;
 	top: 13px;
+	background: #a31d36;
+	height: 2px;
 	width: 8px;
 }
 
@@ -277,6 +278,35 @@ main a:hover:after,
 	background: var(--color-crimson-dark);
 }
 
+span.button {
+	display: inline-block;
+	margin-top: 16px;
+}
+
+span.button + span.button {
+	margin-left: 32px;
+}
+
+blockquote:before {
+	background-image: url(images/icon-dots.svg);
+	background-size: 36px 36px;
+	content: "";
+	display: inline-block;
+	height: 36px;
+	left: -20px;
+	line-height: 0;
+	margin: 0 10px 0 0;
+	position: relative;
+	top: 5px;
+	width: 36px;
+}
+
+blockquote cite {
+	font-size: .8em;
+	font-weight: 400;
+	padding-top: 1em;
+}
+
 #site-footer {
 	color: #fff;
 }
@@ -326,7 +356,8 @@ p.intro,
 	line-height: 1.75;
 }
 
-.hero h2:after {
+.hero h2:after,
+.centered-content h2:after {
 	margin: 0 auto;
 	right: 0;
 }
@@ -341,4 +372,63 @@ p.intro,
 
 .hero p {
 	text-align: center;
+}
+
+.archive-columns h1 {
+	margin: 0;
+	padding: 18px 0 65px;
+	position: relative;
+}
+
+.archive-columns h1:after {
+	background-color: rgba(0, 0, 0, .1);
+	bottom: 25px;
+	content: "";
+	height: 10px;
+	left: 0;
+	position: absolute;
+	width: 70px;
+}
+
+#secondary h2 {
+	font-size: .9em;
+	padding: 35px 0;
+	letter-spacing: .4em;
+	text-transform: uppercase;
+}
+
+#secondary h2:after {
+	background-color: rgba(0, 0, 0, .1);
+	bottom: 15px;
+	content: "";
+	height: 2px;
+	left: 0;
+	position: absolute;
+	width: 30px;
+}
+
+#secondary p {
+	font-size: .9em;
+}
+
+.centered-content > * {
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+	span.button {
+		display: block;
+	}
+
+	span.button + span.button {
+		margin-left: 0;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+	#top-menu a {
+		font-size: 1.2em;
+	}
 }
