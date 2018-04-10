@@ -158,7 +158,7 @@ section {
 	.menu-open #top-menu {
 		height: calc(100vh - 60px);
 		opacity: 1;
-		padding: 48px;
+		padding: 100px 40px 40px;
 		transition: opacity .3s ease-in-out;
 	}
 
@@ -198,9 +198,9 @@ section {
 	}
 
 	#top-menu a {
-		color: #fff;
-		font-size: 1em;
 		justify-content: center;
+		padding-bottom: 30px;
+		padding-top: 30px;
 	}
 
 	#top-menu a:hover {
@@ -671,16 +671,6 @@ section {
 }
 
 @media screen and (max-width: 900px) {
-
-	.menu-open #top-menu {
-		padding: 100px 40px 40px;
-	}
-
-	#top-menu a {
-		font-size: 1.5em;
-		padding-bottom: 30px;
-		padding-top: 30px;
-	}
 
 	.divider.parallax {
 		background-size: 200%;
