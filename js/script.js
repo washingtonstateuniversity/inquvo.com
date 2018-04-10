@@ -46,6 +46,17 @@
 		}
 	};
 
+	let fix_site_header = function() {
+		let site_header = document.getElementById( "site-header" );
+		let y = window.pageYOffset;
+
+		if ( 46 < y ) {
+			site_header.classList.add( "fixed" );
+		} else {
+			site_header.classList.remove( "fixed" );
+		}
+	};
+
 	window.addEventListener( "scroll", function() {
 		if ( article_header ) {
 			window.requestAnimationFrame( header_parallax );
@@ -53,6 +64,10 @@
 
 		if ( parallax_elements ) {
 			window.requestAnimationFrame( parallax );
+		}
+
+		if ( 600 >= window.outerWidth && document.body.classList.contains( "admin-bar" ) ) {
+			window.requestAnimationFrame( fix_site_header );
 		}
 	} );
 

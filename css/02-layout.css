@@ -764,3 +764,15 @@ section {
 		display: none;
 	}
 }
+
+@media screen and (max-width: 600px) {
+
+	.admin-bar #site-header {
+		position: absolute;
+	}
+
+	.admin-bar #site-header.fixed {
+		position: fixed;
+		top: 0;
+	}
+}
