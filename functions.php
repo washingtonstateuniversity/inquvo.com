@@ -7,6 +7,7 @@ require_once __DIR__ . '/includes/navigation.php';
 
 add_action( 'after_setup_theme', 'inquvo_setup', 11 );
 add_action( 'wp_enqueue_scripts', 'inquvo_scripts', 11 );
+add_filter( 'body_class', 'inquvo_posts_page_body_class' );
 
 /**
  * Provides a theme version for use in cache busting.
@@ -53,4 +54,25 @@ function inquvo_scripts() {
 
 	// Enqueue Inquvo scripts theme version.
 	wp_enqueue_script( 'inquvo-scripts', get_stylesheet_directory_uri() . '/js/script.js', array(), inquvo_theme_version(), true );
+}
+
+/**
+ * Filter the body classes for the posts page.
+ *
+ * @since 0.0.5
+ *
+ * @param array $classes
+ *
+ * @return array
+ */
+function inquvo_posts_page_body_class( $classes ) {
+	if ( is_home() && get_option( 'page_for_posts' ) ) {
+		$posts_page_id = get_option( 'page_for_posts' );
+
+		if ( has_post_thumbnail( $posts_page_id ) ) {
+			$classes[] = 'has-post-thumbnail';
+		}
+	}
+
+	return $classes;
 }

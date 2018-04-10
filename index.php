@@ -1,6 +1,18 @@
 <?php get_header(); ?>
 
-	<header class="archive-header">
+	<?php
+	$featured_image = false;
+
+	if ( is_home() && get_option( 'page_for_posts' ) ) {
+		$posts_page_id = get_option( 'page_for_posts' );
+
+		if ( has_post_thumbnail( $posts_page_id ) ) {
+			$featured_image = get_the_post_thumbnail_url( $posts_page_id, 'full' );
+		}
+	}
+	?>
+
+	<header class="article-header"<?php if ( $featured_image ) { ?> style="background-image:url(<?php echo esc_url( $featured_image ); ?> );"<?php } ?>>
 		<?php
 		$title = '';
 
