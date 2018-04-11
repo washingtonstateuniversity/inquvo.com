@@ -9,6 +9,8 @@ add_action( 'after_setup_theme', 'inquvo_setup', 11 );
 add_action( 'wp_enqueue_scripts', 'inquvo_scripts', 11 );
 add_filter( 'body_class', 'inquvo_posts_page_body_class' );
 
+remove_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
+
 /**
  * Provides a theme version for use in cache busting.
  *

@@ -410,6 +410,27 @@ p.intro,
 	text-align: center;
 }
 
+.js .home article div > *:not(div) {
+	opacity: 0;
+	-ms-transform: translateY(100px);
+	    transform: translateY(100px);
+	transition: transform 1s, opacity 1s;
+}
+
+.js .home article div > *:not(div).animate {
+	opacity: 1;
+	-ms-transform: translateY(0);
+	    transform: translateY(0);
+}
+
+@media screen and (max-width: 900px) {
+
+	#top-menu a {
+		color: #fff;
+		font-size: 1.5em;
+	}
+}
+
 @media screen and (max-width: 768px) {
 
 	span.button {
@@ -596,7 +617,7 @@ section {
 	.menu-open #top-menu {
 		height: calc(100vh - 60px);
 		opacity: 1;
-		padding: 48px;
+		padding: 100px 40px 40px;
 		transition: opacity .3s ease-in-out;
 	}
 
@@ -636,10 +657,10 @@ section {
 	}
 
 	#top-menu a {
-		color: #fff;
-		font-size: 1em;
 		-ms-flex-pack: center;
 		    justify-content: center;
+		padding-bottom: 30px;
+		padding-top: 30px;
 	}
 
 	#top-menu a:hover {
@@ -670,7 +691,7 @@ section {
 
 .article-header,
 .archive-header {
-	background: #4fcad3;
+	background: #3d8a93;
 	left: calc(50% - 50vw);
 	padding: 56px 64px;
 	position: relative;
@@ -1129,16 +1150,6 @@ section {
 
 @media screen and (max-width: 900px) {
 
-	.menu-open #top-menu {
-		padding: 100px 40px 40px;
-	}
-
-	#top-menu a {
-		font-size: 1.5em;
-		padding-bottom: 30px;
-		padding-top: 30px;
-	}
-
 	.divider.parallax {
 		background-size: 200%;
 		height: 300px;
@@ -1219,6 +1230,18 @@ section {
 
 	.channels {
 		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	.admin-bar #site-header {
+		position: absolute;
+	}
+
+	.admin-bar #site-header.fixed {
+		position: fixed;
+		top: 0;
 	}
 }
 
