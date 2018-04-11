@@ -11,14 +11,31 @@
 :root {
 
 	/* teals */
+	--color-teal: #3d8a93;
+	--color-teal-lightest: #edf3f4;
+	--color-teal-light: #aec7cb;
+	--color-teal-medium: #82a9af;
+	--color-teal-dark: #4f868e;
+	--color-teal-accent: #4fcad3;
 
 	/* grays */
+	--color-gray-5: #eff0f1;
+	--color-gray-10: #b5babe;
+	--color-gray-25: #8d959a;
+	--color-gray: #5e6a71;
+	--color-gray-75: #404040;
+	--color-gray-80: #333;
+	--color-gray-90: #191919;
 
 	/* crimsons */
+	--color-crimson: #a60f2d;
+	--color-crimson-dark: #820c23;
+	--color-crimson-accent: #ca1237;
 }
 
 body {
 	color: #404040;
+	color: var(--color-gray-75);
 	font-family: Montserrat, sans-serif;
 }
 
@@ -75,6 +92,7 @@ h2 {
 
 h2:after {
 	background-color: #3d8a93;
+	background-color: var(--color-teal);
 	bottom: 25px;
 	content: "";
 	height: 10px;
@@ -157,12 +175,14 @@ a {
 main a,
 .footer-menu a {
 	color: #4fcad3;
+	color: var(--color-teal-accent);
 	font-weight: 400;
 	position: relative;
 }
 
 main a:hover {
 	color: #4fcad3;
+	color: var(--color-teal-accent);
 }
 
 main a:after,
@@ -194,10 +214,12 @@ main a:hover:after,
 #top-menu a:hover,
 #top-menu .current-menu-item a {
 	color: #3d8a93;
+	color: var(--color-teal);
 }
 
 #top-menu a:before {
 	background: #3d8a93;
+	background: var(--color-teal);
 	content: "";
 	height: 5px;
 	left: 0;
@@ -218,6 +240,7 @@ main a:hover:after,
 
 .button a {
 	background: #3d8a93;
+	background: var(--color-teal);
 	border-radius: 2px;
 	box-shadow: 0 0 0 transparent;
 	box-sizing: border-box;
@@ -242,18 +265,22 @@ main a:hover:after,
 .button.white a {
 	background: #fff;
 	color: #404040;
+	color: var(--color-gray-75);
 }
 
 .button.transparent a {
 	background: transparent;
 	border: 1px solid #3d8a93;
+	border: 1px solid var(--color-teal);
 	color: #3d8a93;
+	color: var(--color-teal);
 }
 
 .button a:hover,
 .button.white a:hover,
 .button.transparent a:hover {
 	background: #4fcad3;
+	background: var(--color-teal-accent);
 	box-shadow: 0 3px 15px rgba(0, 0, 0, .2);
 	color: #fff;
 	-ms-transform: translateY(-3px);
@@ -262,15 +289,18 @@ main a:hover:after,
 
 .button.transparent a:hover {
 	border-color: #4fcad3;
+	border-color: var(--color-teal-accent);
 }
 
 .button.crimson a {
 	background: #ca1237;
+	background: var(--color-crimson-accent);
 	color: #fff;
 }
 
 .button.crimson a:hover {
 	background: #820c23;
+	background: var(--color-crimson-dark);
 }
 
 span.button {
@@ -313,6 +343,7 @@ blockquote cite {
 
 .footer-menu a:hover {
 	color: #4fcad3;
+	color: var(--color-teal-accent);
 }
 
 .footer-menu > ul > li > a {
@@ -522,6 +553,7 @@ section {
 
 #site-header .logo:hover .logo-q {
 	fill: #a60f2d;
+	fill: var(--color-crimson);
 }
 
 #site-navigation {
@@ -665,6 +697,7 @@ section {
 
 	#top-menu a:hover {
 		color: #4fcad3;
+		color: var(--color-teal-accent);
 	}
 
 	#top-menu a:before {
@@ -692,6 +725,7 @@ section {
 .article-header,
 .archive-header {
 	background: #3d8a93;
+	background: var(--color-teal);
 	left: calc(50% - 50vw);
 	padding: 56px 64px;
 	position: relative;
@@ -700,6 +734,7 @@ section {
 
 .has-post-thumbnail .article-header {
 	background-color: #ca1237;
+	background-color: var(--color-crimson-accent);
 	background-position: center;
 	background-size: cover;
 	padding-bottom: 180px;
@@ -718,6 +753,7 @@ section {
 
 .has-post-thumbnail .article-header:before {
 	background: linear-gradient(to right, #ca1237 0%, transparent 100%);
+	background: linear-gradient(to right, var(--color-crimson-accent) 0%, transparent 100%);
 	mix-blend-mode: multiply;
 }
 
@@ -846,6 +882,7 @@ section {
 
 .hero > div:first-of-type:before {
 	background: linear-gradient(98.5deg, #4fcad3 0%, transparent 100%);
+	background: linear-gradient(98.5deg, var(--color-teal-accent) 0%, transparent 100%);
 }
 
 .hero > div:first-of-type:after {
@@ -881,6 +918,7 @@ section {
 
 	.hero > div:first-of-type:before {
 		background: linear-gradient(to right, #4fcad3 0%, transparent 100%);
+		background: linear-gradient(to right, var(--color-teal-accent) 0%, transparent 100%);
 		mix-blend-mode: multiply;
 	}
 
@@ -899,6 +937,7 @@ section {
 
 .hero > div:last-of-type:after {
 	background: #3d8a93;
+	background: var(--color-teal);
 	content: "";
 	height: 230px;
 	left: 0;
@@ -989,6 +1028,7 @@ section {
 
 .background-halves:after {
 	background: #eff0f1;
+	background: var(--color-gray-5);
 }
 
 .divider {
@@ -1006,6 +1046,7 @@ section {
 
 .divider.parallax:before {
 	background: linear-gradient(to right, #ca1237 0%, transparent 100%);
+	background: linear-gradient(to right, var(--color-crimson-accent) 0%, transparent 100%);
 	content: "";
 	height: 100%;
 	mix-blend-mode: multiply;
@@ -1036,6 +1077,7 @@ section {
 
 #site-footer {
 	background: #333;
+	background: var(--color-gray-80);
 	overflow: hidden;
 	padding: 0 64px;
 }
@@ -1049,6 +1091,7 @@ section {
 
 #site-footer div + div {
 	border-top: 1px solid #404040;
+	border-top: 1px solid var(--color-gray-75);
 	padding: 10px 28px;
 }
 
@@ -1255,6 +1298,7 @@ main textarea {
 	border-bottom: 1px solid rgba(64, 64, 64, .1);
 	border-radius: 0;
 	color: #404040;
+	color: var(--color-gray-75);
 	font-family: Montserrat, sans-serif;
 	font-size: 14px;
 	font-weight: 300;
@@ -1267,11 +1311,13 @@ main textarea {
 main input:hover,
 main textarea:hover {
 	border-bottom-color: #404040;
+	border-bottom-color: var(--color-gray-75);
 }
 
 main input:focus,
 main textarea:focus {
 	border-bottom-color: #a60f2d;
+	border-bottom-color: var(--color-crimson);
 	outline: none;
 }
 
@@ -1286,6 +1332,7 @@ main textarea:focus {
 
 ::-webkit-input-placeholder {
 	color: #404040;
+	color: var(--color-gray-75);
 	font-family: Montserrat, sans-serif;
 	font-size: 14px;
 	font-weight: 300;
@@ -1294,6 +1341,7 @@ main textarea:focus {
 
 :-ms-input-placeholder {
 	color: #404040;
+	color: var(--color-gray-75);
 	font-family: Montserrat, sans-serif;
 	font-size: 14px;
 	font-weight: 300;
@@ -1302,6 +1350,7 @@ main textarea:focus {
 
 ::-ms-input-placeholder {
 	color: #404040;
+	color: var(--color-gray-75);
 	font-family: Montserrat, sans-serif;
 	font-size: 14px;
 	font-weight: 300;
@@ -1310,6 +1359,7 @@ main textarea:focus {
 
 ::placeholder {
 	color: #404040;
+	color: var(--color-gray-75);
 	font-family: Montserrat, sans-serif;
 	font-size: 14px;
 	font-weight: 300;
@@ -1322,6 +1372,7 @@ main input[type="submit"] {
 	   -moz-appearance: none;
 	        appearance: none;
 	background: #ca1237;
+	background: var(--color-crimson-accent);
 	border: none;
 	border-radius: 2px;
 	box-shadow: 0 0 0 transparent;
@@ -1347,6 +1398,7 @@ main button:focus,
 main input[type="submit"]:hover,
 main input[type="submit"]:focus {
 	background: #820c23;
+	background: var(--color-crimson-dark);
 	border: none;
 	box-shadow: 0 3px 15px rgba(0, 0, 0, .2);
 	-ms-transform: translateY(-3px);
@@ -1411,6 +1463,7 @@ main input[type="radio"] + label:after {
 main input[type="radio"] + label:hover:after,
 main input[type="radio"]:checked + label:after {
 	background-color: #a60f2d;
+	background-color: var(--color-crimson);
 }
 
 main label {
