@@ -415,17 +415,6 @@ p.intro,
 	text-align: center;
 }
 
-.js .home article div > *:not(div) {
-	opacity: 0;
-	transform: translateY(100px);
-	transition: transform 1s, opacity 1s;
-}
-
-.js .home article div > *:not(div).animate {
-	opacity: 1;
-	transform: translateY(0);
-}
-
 @media screen and (max-width: 900px) {
 
 	#top-menu a {

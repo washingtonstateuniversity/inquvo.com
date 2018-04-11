@@ -435,6 +435,17 @@ section {
 	width: 1px;
 }
 
+.js .slide-fade {
+	opacity: 0;
+	transform: translateY(100px);
+	transition: transform 1s, opacity 1s;
+}
+
+.js .slide-fade.animate {
+	opacity: 1;
+	transform: translateY(0);
+}
+
 .dots-above,
 .dots-below {
 	position: relative;

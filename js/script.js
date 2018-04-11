@@ -57,7 +57,7 @@
 		}
 	};
 
-	let home_content = document.querySelectorAll( "article div > *:not(div)" );
+	let home_content = document.querySelectorAll( ".slide-fade" );
 
 	let home_content_motion = function() {
 		home_content.forEach( element => {
