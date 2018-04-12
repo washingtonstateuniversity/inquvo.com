@@ -276,29 +276,6 @@ section {
 	padding: 120px 0;
 }
 
-.vertical-header {
-	left: 64px;
-	position: absolute;
-	top: 330px; /* Rubbish */
-	z-index: 1;
-}
-
-.vertical-header svg {
-	transform: rotate(-90deg) translateY(-173px);
-}
-
-.vertical-header h1 {
-	font-size: 80px;
-	font-weight: 500;
-	line-height: .9;
-	margin: 0;
-}
-
-.vertical-header p {
-	font-size: 14px;
-	text-transform: lowercase;
-}
-
 .wp-block-columns {
 	padding: 120px 0;
 }
@@ -313,6 +290,65 @@ section {
 
 .layout-column-2 {
 	padding-left: 20px;
+}
+
+.home-header {
+	display: none;
+}
+
+.js .home-header {
+	display: block;
+	left: calc(50% - 50vw + 64px);
+	margin-top: -470px;
+	position: absolute;
+	z-index: 1;
+}
+
+@media screen and (max-width: 900px) {
+
+	.js .home-header {
+		display: none;
+	}
+}
+
+.home-header path {
+	fill-opacity: 0;
+}
+
+.home-header-inuvo,
+.home-header-q {
+	animation: trace 1.2s ease-in-out forwards, paint .4s ease-in-out forwards 1s;
+	stroke: #fff;
+	stroke-width: .5;
+}
+
+.home-header-inuvo {
+	stroke-dasharray: 203;
+	stroke-dashoffset: 203;
+}
+
+.home-header-q {
+	stroke-dasharray: 186;
+	stroke-dashoffset: 186;
+}
+
+.home-header-tag {
+	animation: paint .4s ease-in-out forwards 1.4s;
+}
+
+@keyframes trace {
+
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes paint {
+
+	to {
+		fill-opacity: 1;
+		stroke-width: 0;
+	}
 }
 
 .hero {
@@ -346,6 +382,14 @@ section {
 	flex-direction: column;
 	justify-content: flex-end;
 	padding: 136px 0 370px;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1320px) {
+
+	.home div:first-of-type {
+		padding-left: 124px;
+		padding-right: 124px;
+	}
 }
 
 .hero > div:first-of-type > * {
