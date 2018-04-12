@@ -782,7 +782,7 @@ section {
 .js .home-header {
 	display: block;
 	left: calc(50% - 50vw + 64px);
-	margin-top: -470px;
+	margin-top: calc(-360px + 7.5vw);
 	position: absolute;
 	z-index: 1;
 }
