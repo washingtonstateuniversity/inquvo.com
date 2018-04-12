@@ -89,9 +89,22 @@
 		}
 	} );
 
+	let home_header_position = function() {
+		let hero_top_height = document.querySelector( ".hero div:first-of-type" ).offsetHeight;
+
+		document.querySelector( ".home-header" ).style.top = hero_top_height + "px";
+	};
+
 	document.addEventListener( "DOMContentLoaded", function() {
 		if ( document.body.classList.contains( "home" ) ) {
 			window.requestAnimationFrame( home_content_motion );
+			home_header_position();
+		}
+	} );
+
+	window.addEventListener( "resize", function() {
+		if ( document.body.classList.contains( "home" ) ) {
+			home_header_position();
 		}
 	} );
 
