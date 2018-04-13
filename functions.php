@@ -19,7 +19,7 @@ remove_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
  * @return string
  */
 function inquvo_theme_version() {
-	return '0.0.5';
+	return '0.0.6';
 }
 
 /**
