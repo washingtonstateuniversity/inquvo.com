@@ -4,11 +4,10 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<?php if ( has_post_thumbnail() ) { ?>
-		<header class="article-header" style="background-image:url(<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?> );">
-		<?php } else { ?>
 		<header class="article-header">
-		<?php } ?>
+			<?php if ( has_post_thumbnail() ) { ?>
+			<div class="header-image" style="background-image: url(<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?>);"></div>
+			<?php } ?>
 			<h1><?php the_title(); ?></h1>
 		</header>
 
