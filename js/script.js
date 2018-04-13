@@ -1,24 +1,36 @@
 ( function() {
 	"use strict";
 
+	var nodes_to_array = function( e ) {
+		return Array.prototype.slice.call( e );
+	};
+
 	var toggle_menu = function( e ) {
 		e.preventDefault();
-		if ( document.body.classList.contains( "menu-open" ) ) {
-			document.body.classList.remove( "menu-open" );
+
+		var body_classes = document.body.classList;
+		var menu_items = nodes_to_array( document.querySelectorAll( "#top-menu > li" ) );
+
+		if ( body_classes.contains( "menu-open" ) ) {
+			body_classes.remove( "menu-open" );
 			this.setAttribute( "aria-expanded", false );
 			this.querySelector( ".screen-reader-text" ).innerHTML = "Open site menu";
+
+			menu_items.reverse().forEach( function( element, i ) {
+				element.style.transitionDelay = "." + i + "s";
+			} );
 		} else {
-			document.body.classList.add( "menu-open" );
+			body_classes.add( "menu-open" );
 			this.setAttribute( "aria-expanded", true );
 			this.querySelector( ".screen-reader-text" ).innerHTML = "Close site menu";
+
+			menu_items.forEach( function( element, i ) {
+				element.style.transitionDelay = "." + i + "s";
+			} );
 		}
 	};
 
 	document.getElementById( "js-menu-toggle" ).addEventListener( "click", toggle_menu );
-
-	var nodes_to_array = function( e ) {
-		return Array.prototype.slice.call( e );
-	};
 
 	var parallax_elements = nodes_to_array( document.querySelectorAll( ".parallax" ) );
 
