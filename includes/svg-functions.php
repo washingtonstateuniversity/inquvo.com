@@ -2,8 +2,17 @@
 
 namespace Inquvo\SVG_Functions;
 
+add_action( 'init', 'Inquvo\SVG_Functions\remove_twentyseventeen_icons' );
 add_action( 'wp_footer', 'Inquvo\SVG_Functions\include_definitions', 9999 );
 
+/**
+ * Remove the SVG definitions added by Twenty Seventeen.
+ *
+ * @since 0.0.8
+ */
+function remove_twentyseventeen_icons() {
+	remove_action( 'wp_footer', 'twentyseventeen_include_svg_icons', 9999 );
+}
 /**
  * Adds SVG definitions to the footer.
  *
