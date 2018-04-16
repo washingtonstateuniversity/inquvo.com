@@ -165,36 +165,15 @@ section {
 	#top-menu li {
 		padding: 0;
 		position: relative;
+	}
+
+	.js #top-menu > li {
 		right: 100%;
 		transition: right .3s ease;
 	}
 
-	.menu-open #top-menu li {
+	.js .menu-open #top-menu > li {
 		right: 0;
-	}
-
-	#top-menu li:nth-of-type(5),
-	.menu-open #top-menu li:first-of-type {
-		transition-delay: .1s;
-	}
-
-	#top-menu li:nth-of-type(4),
-	.menu-open #top-menu li:nth-of-type(2) {
-		transition-delay: .2s;
-	}
-
-	#top-menu li:nth-of-type(3) {
-		transition-delay: .3s;
-	}
-
-	#top-menu li:nth-of-type(2),
-	.menu-open #top-menu li:nth-of-type(4) {
-		transition-delay: .4s;
-	}
-
-	#top-menu li:first-of-type,
-	.menu-open #top-menu li:nth-of-type(5) {
-		transition-delay: .5s;
 	}
 
 	#top-menu a {
@@ -238,16 +217,27 @@ section {
 	width: 100vw;
 }
 
-.has-post-thumbnail .article-header {
+.page .has-post-thumbnail .article-header {
 	background-color: var(--color-crimson-accent);
 	background-position: center;
 	background-size: cover;
 	padding-bottom: 180px;
 	padding-top: 180px;
+	z-index: -1;
 }
 
-.has-post-thumbnail .article-header:before,
-.has-post-thumbnail .article-header:after {
+.header-image {
+	position: fixed;
+	height: 500px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: center center;
+}
+
+.header-image:before,
+.header-image:after {
 	content: "";
 	height: 100%;
 	left: 0;
@@ -256,12 +246,12 @@ section {
 	width: 100%;
 }
 
-.has-post-thumbnail .article-header:before {
+.header-image:before {
 	background: linear-gradient(to right, var(--color-crimson-accent) 0%, transparent 100%);
 	mix-blend-mode: multiply;
 }
 
-.has-post-thumbnail .article-header:after {
+.header-image:after {
 	background: url(images/bg-hero.png) bottom left no-repeat;
 }
 
@@ -273,7 +263,27 @@ section {
 }
 
 .article-content {
+	background: #fff;
 	padding: 120px 0;
+	position: relative;
+}
+
+.article-content:before,
+.article-content:after {
+	background: #fff;
+	content: "";
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: calc(50vw - 50%);
+}
+
+.article-content:before {
+	left: calc(50% - 50vw);
+}
+
+.article-content:after {
+	right: calc(50% - 50vw);
 }
 
 .wp-block-columns {

@@ -19,7 +19,7 @@ remove_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
  * @return string
  */
 function inquvo_theme_version() {
-	return '0.0.6';
+	return '0.0.7';
 }
 
 /**
@@ -54,7 +54,7 @@ function inquvo_scripts() {
 	// Enqueue Inquvo styles with theme version.
 	wp_enqueue_style( 'inquvo-style', get_stylesheet_directory_uri() . '/style.css', array(), inquvo_theme_version() );
 
-	// Enqueue Inquvo scripts theme version.
+	// Enqueue Inquvo scripts with theme version.
 	wp_enqueue_script( 'inquvo-scripts', get_stylesheet_directory_uri() . '/js/script.js', array(), inquvo_theme_version(), true );
 }
 
