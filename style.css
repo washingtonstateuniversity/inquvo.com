@@ -769,6 +769,7 @@ section {
 .article-content:after,
 .archive-columns:after {
 	right: calc(50% - 50vw);
+	z-index: -1;
 }
 
 .wp-block-columns {
