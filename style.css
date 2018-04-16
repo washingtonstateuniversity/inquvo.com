@@ -352,8 +352,7 @@ blockquote cite {
 	text-transform: uppercase;
 }
 
-.article-header h1,
-.archive-header h1 {
+.page-header h1 {
 	color: #fff;
 	text-transform: uppercase;
 }
@@ -688,8 +687,7 @@ section {
 	z-index: 1;
 }
 
-.article-header,
-.archive-header {
+.page-header {
 	background: #3d8a93;
 	background: var(--color-teal);
 	left: calc(50% - 50vw);
@@ -698,7 +696,7 @@ section {
 	width: 100vw;
 }
 
-.page .has-post-thumbnail .article-header {
+.has-post-thumbnail .page-header {
 	background-color: #ca1237;
 	background-color: var(--color-crimson-accent);
 	background-position: center;
@@ -738,21 +736,23 @@ section {
 	background: url(images/bg-hero.png) bottom left no-repeat;
 }
 
-.article-header h1,
-.archive-header h1 {
+.page-header h1 {
 	margin: 0 auto;
 	max-width: 1152px;
 	position: relative;
 }
 
-.article-content {
+.article-content,
+.archive-columns {
 	background: #fff;
 	padding: 120px 0;
 	position: relative;
 }
 
 .article-content:before,
-.article-content:after {
+.article-content:after,
+.archive-columns:before,
+.archive-columns:after {
 	background: #fff;
 	content: "";
 	height: 100%;
@@ -761,11 +761,13 @@ section {
 	width: calc(50vw - 50%);
 }
 
-.article-content:before {
+.article-content:before,
+.archive-columns:before {
 	left: calc(50% - 50vw);
 }
 
-.article-content:after {
+.article-content:after,
+.archive-columns:after {
 	right: calc(50% - 50vw);
 }
 

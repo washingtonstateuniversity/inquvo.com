@@ -326,8 +326,7 @@ blockquote cite {
 	text-transform: uppercase;
 }
 
-.article-header h1,
-.archive-header h1 {
+.page-header h1 {
 	color: #fff;
 	text-transform: uppercase;
 }

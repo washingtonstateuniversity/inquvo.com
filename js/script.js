@@ -98,7 +98,7 @@
 	var header_image = document.querySelector( ".header-image" );
 
 	var header_image_size = function() {
-		var article_header_height = document.querySelector( ".article-header" ).offsetHeight;
+		var article_header_height = document.querySelector( ".page-header" ).offsetHeight;
 		var site_header_height = document.getElementById( "site-header" ).offsetHeight;
 		var header_image_height = article_header_height + site_header_height;
 
