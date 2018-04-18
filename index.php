@@ -12,7 +12,11 @@
 	}
 	?>
 
-	<header class="article-header"<?php if ( $featured_image ) { ?> style="background-image:url(<?php echo esc_url( $featured_image ); ?> );"<?php } ?>>
+	<header class="page-header">
+		<?php if ( $featured_image ) { ?>
+			<div class="header-image" style="background-image: url(<?php echo esc_url( $featured_image ); ?>);"></div>
+		<?php } ?>
+
 		<?php
 		$title = '';
 

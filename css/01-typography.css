@@ -1,7 +1,7 @@
 :root {
 
 	/* teals */
-	--color-teal: #3d8a93;
+	--color-teal: #398089;
 	--color-teal-lightest: #edf3f4;
 	--color-teal-light: #aec7cb;
 	--color-teal-medium: #82a9af;
@@ -326,8 +326,7 @@ blockquote cite {
 	text-transform: uppercase;
 }
 
-.article-header h1,
-.archive-header h1 {
+.page-header h1 {
 	color: #fff;
 	text-transform: uppercase;
 }
