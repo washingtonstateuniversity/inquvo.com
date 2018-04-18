@@ -11,7 +11,7 @@
 :root {
 
 	/* teals */
-	--color-teal: #3d8a93;
+	--color-teal: #398089;
 	--color-teal-lightest: #edf3f4;
 	--color-teal-light: #aec7cb;
 	--color-teal-medium: #82a9af;
@@ -91,7 +91,7 @@ h2 {
 }
 
 h2:after {
-	background-color: #3d8a93;
+	background-color: #398089;
 	background-color: var(--color-teal);
 	bottom: 25px;
 	content: "";
@@ -213,12 +213,12 @@ main a:hover:after,
 
 #top-menu a:hover,
 #top-menu .current-menu-item a {
-	color: #3d8a93;
+	color: #398089;
 	color: var(--color-teal);
 }
 
 #top-menu a:before {
-	background: #3d8a93;
+	background: #398089;
 	background: var(--color-teal);
 	content: "";
 	height: 5px;
@@ -239,7 +239,7 @@ main a:hover:after,
 }
 
 .button a {
-	background: #3d8a93;
+	background: #398089;
 	background: var(--color-teal);
 	border-radius: 2px;
 	box-shadow: 0 0 0 transparent;
@@ -270,9 +270,9 @@ main a:hover:after,
 
 .button.transparent a {
 	background: transparent;
-	border: 1px solid #3d8a93;
+	border: 1px solid #398089;
 	border: 1px solid var(--color-teal);
-	color: #3d8a93;
+	color: #398089;
 	color: var(--color-teal);
 }
 
@@ -688,7 +688,7 @@ section {
 }
 
 .page-header {
-	background: #3d8a93;
+	background: #398089;
 	background: var(--color-teal);
 	left: calc(50% - 50vw);
 	padding: 56px 64px;
@@ -940,7 +940,7 @@ section {
 }
 
 .hero > div:last-of-type:after {
-	background: #3d8a93;
+	background: #398089;
 	background: var(--color-teal);
 	content: "";
 	height: 230px;
@@ -1009,7 +1009,7 @@ section {
 
 	.hero:after {
 		background: #3d8a93;
-		background: #3d8a93;
+		background: #398089;
 		background: var(--color-teal);
 		content: "";
 		height: 230px;
