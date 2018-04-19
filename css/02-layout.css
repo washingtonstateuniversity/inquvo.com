@@ -262,7 +262,7 @@ section {
 }
 
 .article-content,
-.archive-columns {
+.layout-sidebar-right {
 	background: #fff;
 	padding: 120px 0;
 	position: relative;
@@ -270,8 +270,8 @@ section {
 
 .article-content:before,
 .article-content:after,
-.archive-columns:before,
-.archive-columns:after {
+.blog .layout-sidebar-right:before,
+.blog .layout-sidebar-right:after {
 	background: #fff;
 	content: "";
 	height: 100%;
@@ -281,12 +281,12 @@ section {
 }
 
 .article-content:before,
-.archive-columns:before {
+.blog .layout-sidebar-right:before {
 	left: calc(50% - 50vw);
 }
 
 .article-content:after,
-.archive-columns:after {
+.blog .layout-sidebar-right:after {
 	right: calc(50% - 50vw);
 	z-index: -1;
 }
@@ -642,7 +642,7 @@ section {
 	height: 50px;
 }
 
-.archive-columns {
+.layout-sidebar-right {
 	display: flex;
 	padding: 120px 0;
 }
@@ -832,7 +832,7 @@ section {
 		content: none;
 	}
 
-	.archive-columns {
+	.layout-sidebar-right {
 		display: block;
 	}
 

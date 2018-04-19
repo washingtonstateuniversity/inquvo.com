@@ -1,25 +1,33 @@
 <?php get_header(); ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+	<div class="layout-sidebar-right">
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div id="primary">
 
-		<header class="page-header">
-			<h1><?php the_title(); ?></h1>
-		</header>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-		<div class="article-content">
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<span class="screen-reader-text">Posted on</span>
+				<header class="article-header">
 
-			<time class="entry-date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>"><?php echo esc_attr( get_the_date() ); ?></time>
+					<span class="screen-reader-text">Posted on</span>
 
-			<?php the_content(); ?>
+					<time class="entry-date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>"><?php echo esc_attr( get_the_date() ); ?></time>
+
+					<h1><?php the_title(); ?></h1>
+
+				</header>
+
+				<?php the_content(); ?>
+
+			</article>
+
+			<?php endwhile; ?>
 
 		</div>
 
-	</article>
+		<?php get_sidebar(); ?>
 
-	<?php endwhile; ?>
+	</div>
 
 <?php get_footer();

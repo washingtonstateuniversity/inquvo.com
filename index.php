@@ -33,7 +33,7 @@
 		<h1><?php echo esc_html( $title ); ?></h1>
 	</header>
 
-	<div class="archive-columns">
+	<div class="layout-sidebar-right">
 
 		<div id="primary">
 
