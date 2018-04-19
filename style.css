@@ -5,7 +5,7 @@
  Author:      WSU University Communications, philcable
  Author URI:  https://web.wsu.edu
  Template:    twentyseventeen
- Version:     0.0.8
+ Version:     0.0.9
 */
 
 :root {
@@ -309,7 +309,7 @@ span.button {
 }
 
 span.button + span.button {
-	margin-left: 32px;
+	margin-left: 10px;
 }
 
 blockquote:before {
@@ -344,6 +344,10 @@ blockquote cite {
 .footer-menu a:hover {
 	color: #4fcad3;
 	color: var(--color-teal-accent);
+}
+
+.back-to-top a:hover {
+	opacity: .3;
 }
 
 .footer-menu > ul > li > a {
@@ -399,13 +403,13 @@ p.intro,
 	text-align: center;
 }
 
-.archive-columns h1 {
+.blog article h1 {
 	margin: 0;
 	padding: 18px 0 65px;
 	position: relative;
 }
 
-.archive-columns h1:after {
+.blog article h1:after {
 	background-color: rgba(0, 0, 0, .1);
 	bottom: 25px;
 	content: "";
@@ -413,6 +417,10 @@ p.intro,
 	left: 0;
 	position: absolute;
 	width: 70px;
+}
+
+.single h1 {
+	margin-bottom: 20px;
 }
 
 #secondary h2 {
@@ -438,6 +446,18 @@ p.intro,
 
 .centered-content > * {
 	text-align: center;
+}
+
+.entry-date {
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+	color: #4fcad3;
+	color: var(--color-teal-accent);
+	display: block;
+	font-size: .75em;
+	font-weight: 400;
+	margin-bottom: 30px;
+	padding-bottom: 5px;
+	text-transform: uppercase;
 }
 
 @media screen and (max-width: 900px) {
@@ -466,12 +486,23 @@ p.intro,
 	}
 }
 
+::-moz-selection {
+	color: #262626;
+	background: #f2f2f2;
+}
+
+::selection {
+	color: #262626;
+	background: #f2f2f2;
+}
+
 html * {
 	box-sizing: border-box;
 }
 
 body {
 	margin: 60px 0 0;
+	overflow-x: hidden;
 }
 
 article,
@@ -743,7 +774,7 @@ section {
 }
 
 .article-content,
-.archive-columns {
+.layout-sidebar-right {
 	background: #fff;
 	padding: 120px 0;
 	position: relative;
@@ -751,8 +782,8 @@ section {
 
 .article-content:before,
 .article-content:after,
-.archive-columns:before,
-.archive-columns:after {
+.blog .layout-sidebar-right:before,
+.blog .layout-sidebar-right:after {
 	background: #fff;
 	content: "";
 	height: 100%;
@@ -762,12 +793,12 @@ section {
 }
 
 .article-content:before,
-.archive-columns:before {
+.blog .layout-sidebar-right:before {
 	left: calc(50% - 50vw);
 }
 
 .article-content:after,
-.archive-columns:after {
+.blog .layout-sidebar-right:after {
 	right: calc(50% - 50vw);
 	z-index: -1;
 }
@@ -1008,6 +1039,7 @@ section {
 	}
 
 	.hero:after {
+		animation: float 4s ease-in-out infinite;
 		background: #3d8a93;
 		background: #398089;
 		background: var(--color-teal);
@@ -1145,7 +1177,7 @@ section {
 	height: 50px;
 }
 
-.archive-columns {
+.layout-sidebar-right {
 	display: -ms-flexbox;
 	display: flex;
 	padding: 120px 0;
@@ -1161,11 +1193,43 @@ section {
 	padding-left: 32px;
 }
 
+#content:after {
+	animation: float 4s ease-in-out infinite;
+	background: #3d8a93;
+	bottom: -70px;
+	content: "";
+	height: 140px;
+	margin: 0;
+	position: absolute;
+	right: 20px;
+	width: 1px;
+}
+
+@keyframes float {
+
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-20px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
 #site-footer {
 	background: #333;
 	background: var(--color-gray-80);
 	overflow: hidden;
 	padding: 0 64px;
+	transition: background .3s ease;
+}
+
+#site-footer:hover {
+	background: #292929;
 }
 
 #site-footer div {
@@ -1277,6 +1341,14 @@ section {
 	width: 24px;
 }
 
+.row-start-2 {
+	grid-row-start: 2;
+}
+
+.row-span-2 {
+	grid-row-end: span 2;
+}
+
 @media screen and (max-width: 900px) {
 
 	.divider.parallax {
@@ -1301,7 +1373,7 @@ section {
 		content: none;
 	}
 
-	.archive-columns {
+	.layout-sidebar-right {
 		display: block;
 	}
 
@@ -1372,6 +1444,29 @@ section {
 		position: fixed;
 		top: 0;
 	}
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	overflow-y: scroll;
+	background-color: rgba(236, 236, 236, 1);
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: none;
+	border-radius: 0;
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 0;
+	border: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #ca1237;
+	box-shadow: none;
 }
 
 main input,
@@ -1562,6 +1657,7 @@ main label {
 
 .gform_wrapper {
 	max-width: 800px;
+	padding-bottom: 40px;
 }
 
 .gform_body li:before {

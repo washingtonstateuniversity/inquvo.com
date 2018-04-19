@@ -284,7 +284,7 @@ span.button {
 }
 
 span.button + span.button {
-	margin-left: 32px;
+	margin-left: 10px;
 }
 
 blockquote:before {
@@ -318,6 +318,10 @@ blockquote cite {
 
 .footer-menu a:hover {
 	color: var(--color-teal-accent);
+}
+
+.back-to-top a:hover {
+	opacity: .3;
 }
 
 .footer-menu > ul > li > a {
@@ -373,13 +377,13 @@ p.intro,
 	text-align: center;
 }
 
-.archive-columns h1 {
+.blog article h1 {
 	margin: 0;
 	padding: 18px 0 65px;
 	position: relative;
 }
 
-.archive-columns h1:after {
+.blog article h1:after {
 	background-color: rgba(0, 0, 0, .1);
 	bottom: 25px;
 	content: "";
@@ -387,6 +391,10 @@ p.intro,
 	left: 0;
 	position: absolute;
 	width: 70px;
+}
+
+.single h1 {
+	margin-bottom: 20px;
 }
 
 #secondary h2 {
@@ -414,6 +422,17 @@ p.intro,
 	text-align: center;
 }
 
+.entry-date {
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+	color: var(--color-teal-accent);
+	display: block;
+	font-size: .75em;
+	font-weight: 400;
+	margin-bottom: 30px;
+	padding-bottom: 5px;
+	text-transform: uppercase;
+}
+
 @media screen and (max-width: 900px) {
 
 	#top-menu a {
@@ -438,4 +457,9 @@ p.intro,
 	#top-menu a {
 		font-size: 1.2em;
 	}
+}
+
+::selection {
+	color: #262626;
+	background: #f2f2f2;
 }

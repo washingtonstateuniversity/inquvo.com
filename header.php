@@ -61,4 +61,8 @@
 
 	<main id="content">
 
-		<?php INQUVO\Navigation\get_feature_link(); ?>
+		<?php
+		if ( ! is_single() ) {
+			INQUVO\Navigation\get_feature_link();
+		}
+		?>

@@ -9,8 +9,6 @@ add_action( 'after_setup_theme', 'inquvo_setup', 11 );
 add_action( 'wp_enqueue_scripts', 'inquvo_scripts', 11 );
 add_filter( 'body_class', 'inquvo_posts_page_body_class' );
 
-remove_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
-
 /**
  * Provides a theme version for use in cache busting.
  *
@@ -19,7 +17,7 @@ remove_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
  * @return string
  */
 function inquvo_theme_version() {
-	return '0.0.8';
+	return '0.0.9';
 }
 
 /**
@@ -28,6 +26,8 @@ function inquvo_theme_version() {
  * @since 0.0.1
  */
 function inquvo_setup() {
+	remove_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
+
 	remove_theme_support( 'automatic-feed-links' );
 	remove_theme_support( 'custom-background' );
 	remove_theme_support( 'custom-header' );
