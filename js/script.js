@@ -95,39 +95,16 @@
 		document.querySelector( ".home-header" ).style.top = hero_top_height + "px";
 	};
 
-	var header_image = document.querySelector( ".header-image" );
-
-	var header_image_size = function() {
-		var article_header_height = document.querySelector( ".page-header" ).offsetHeight;
-		var site_header_height = document.getElementById( "site-header" ).offsetHeight;
-		var header_image_height = article_header_height + site_header_height;
-
-		if ( document.body.classList.contains( "admin-bar" ) ) {
-			var admin_bar_offset = ( 782 >= window.outerWidth ) ? 46 : 32;
-			header_image_height = header_image_height + admin_bar_offset;
-		}
-
-		header_image.style.height = header_image_height + "px";
-	};
-
 	document.addEventListener( "DOMContentLoaded", function() {
 		if ( document.body.classList.contains( "home" ) ) {
 			window.requestAnimationFrame( home_content_motion );
 			home_header_position();
-		}
-
-		if ( header_image ) {
-			header_image_size();
 		}
 	} );
 
 	window.addEventListener( "resize", function() {
 		if ( document.body.classList.contains( "home" ) ) {
 			home_header_position();
-		}
-
-		if ( header_image ) {
-			header_image_size();
 		}
 	} );
 
