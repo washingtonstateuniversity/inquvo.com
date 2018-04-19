@@ -4,6 +4,7 @@ html * {
 
 body {
 	margin: 60px 0 0;
+	overflow-x: hidden;
 }
 
 article,
@@ -509,6 +510,7 @@ section {
 	}
 
 	.hero:after {
+		animation: float 4s ease-in-out infinite;
 		background: #3d8a93;
 		background: var(--color-teal);
 		content: "";
@@ -655,10 +657,42 @@ section {
 	padding-left: 32px;
 }
 
+#content:after {
+	animation: float 4s ease-in-out infinite;
+	background: #3d8a93;
+	bottom: -70px;
+	content: "";
+	height: 140px;
+	margin: 0;
+	position: absolute;
+	right: 20px;
+	width: 1px;
+}
+
+@keyframes float {
+
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-20px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
 #site-footer {
 	background: var(--color-gray-80);
 	overflow: hidden;
 	padding: 0 64px;
+	transition: background .3s ease;
+}
+
+#site-footer:hover {
+	background: #292929;
 }
 
 #site-footer div {
@@ -766,6 +800,14 @@ section {
 	width: 24px;
 }
 
+.row-start-2 {
+	grid-row-start: 2;
+}
+
+.row-span-2 {
+	grid-row-end: span 2;
+}
+
 @media screen and (max-width: 900px) {
 
 	.divider.parallax {
@@ -861,4 +903,27 @@ section {
 		position: fixed;
 		top: 0;
 	}
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	overflow-y: scroll;
+	background-color: rgba(236, 236, 236, 1);
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: none;
+	border-radius: 0;
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 0;
+	border: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #ca1237;
+	box-shadow: none;
 }

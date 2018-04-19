@@ -284,7 +284,7 @@ span.button {
 }
 
 span.button + span.button {
-	margin-left: 32px;
+	margin-left: 10px;
 }
 
 blockquote:before {
@@ -318,6 +318,10 @@ blockquote cite {
 
 .footer-menu a:hover {
 	color: var(--color-teal-accent);
+}
+
+.back-to-top a:hover {
+	opacity: .3;
 }
 
 .footer-menu > ul > li > a {
@@ -438,4 +442,9 @@ p.intro,
 	#top-menu a {
 		font-size: 1.2em;
 	}
+}
+
+::selection {
+	color: #262626;
+	background: #f2f2f2;
 }

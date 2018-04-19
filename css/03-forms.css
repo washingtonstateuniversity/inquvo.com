@@ -147,6 +147,7 @@ main label {
 
 .gform_wrapper {
 	max-width: 800px;
+	padding-bottom: 40px;
 }
 
 .gform_body li:before {
