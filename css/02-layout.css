@@ -218,22 +218,32 @@ section {
 }
 
 .has-post-thumbnail .page-header {
+	align-items: center;
 	background-color: var(--color-crimson-accent);
-	background-position: center;
-	background-size: cover;
-	padding-bottom: 180px;
-	padding-top: 180px;
+	display: flex;
+	height: 400px;
 	z-index: -1;
 }
 
 .header-image {
 	position: fixed;
-	height: 500px;
+	height: 461px;
 	width: 100%;
 	top: 0;
 	left: 0;
 	background-size: cover;
 	background-position: center center;
+}
+
+.admin-bar .header-image {
+	top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+
+	.admin-bar .header-image {
+		top: 46px;
+	}
 }
 
 .header-image:before,
@@ -259,6 +269,7 @@ section {
 	margin: 0 auto;
 	max-width: 1152px;
 	position: relative;
+	width: 100%;
 }
 
 .article-content,
