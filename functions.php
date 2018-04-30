@@ -17,7 +17,7 @@ add_filter( 'body_class', 'inquvo_posts_page_body_class' );
  * @return string
  */
 function inquvo_theme_version() {
-	return '0.0.9';
+	return '0.0.10';
 }
 
 /**
